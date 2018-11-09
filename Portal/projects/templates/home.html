@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock %}
+{% block content %}
+<div id="particles-js"></div>
+<section id="cover">
+    {% include 'topbar.html' %}
+    <div id="cover-title" class="d-flex align-items-center justify-content-center">
+        <div class="container p-2">
+          <h1>Amrita Season of Code</h1>
+          <a href="" class="btn">Projects</a>
+          <a href="" class="btn">Register Now</a>
+        </div>
+    </div>
+    <script>
+     particlesJS("particles-js", {"particles":{"number":{"value":6,"density":{"enable":true,"value_area":800}},"color":{"value":"#FF4500"},"shape":{"type":"polygon","stroke":{"width":0,"color":"#000"},"polygon":{"nb_sides":5},"image":{"src":"img/github.svg","width":100,"height":100}},"opacity":{"value":0.3,"random":true,"anim":{"enable":false,"speed":1,"opacity_min":0.1,"sync":false}},"size":{"value":160,"random":false,"anim":{"enable":true,"speed":10,"size_min":40,"sync":false}},"line_linked":{"enable":false,"distance":200,"color":"#ffffff","opacity":1,"width":2},"move":{"enable":true,"speed":8,"direction":"none","random":false,"straight":false,"out_mode":"out","bounce":false,"attract":{"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":{"detect_on":"canvas","events":{"onhover":{"enable":false,"mode":"grab"},"onclick":{"enable":false,"mode":"push"},"resize":true},"modes":{"grab":{"distance":400,"line_linked":{"opacity":1}},"bubble":{"distance":400,"size":20,"duration":2,"opacity":8,"speed":3},"repulse":{"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":{"particles_nb":2}}},"retina_detect":true});
+    </script>
+
+    <style>
+     #particles-js{ position:absolute; width: 100%; height: 100%; background: #2c2e43; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+    </style>
+</section>
+<section id="about">
+</section>
+<style>
+body
+{
+  font-family: 'PT Sans', sans-serif;
+}
+h1,h2,h3,h4,h5,h6
+{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 900;
+}
+#cover
+{
+   min-height: 100vh;
+   position: relative;
+}
+
+#cover h1
+{
+  color: white;
+  font-size: calc(1.5rem + 3.5vw);
+}
+
+#cover a
+{
+  border: 1px solid white;
+  color: white;
+  border-radius: 0.3rem;
+  font-size: calc(1rem + 0.5vw);
+  margin: 0.5rem;
+  padding: 0.3rem 0.8rem;
+  font-weight: 600;
+}
+
+#cover a:hover
+{
+  background: white;
+  color: #2c2e43;
+}
+
+#cover-title
+{
+   min-height: 80vh;
+}
+#about
+{
+  min-height: 100vh;
+  background: white;
+}
+</style>
+{% endblock %}
