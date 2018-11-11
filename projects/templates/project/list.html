@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block title %}Projects{% endblock %}
+{% block content %}
+<script>
+  function search_projects() {
+
+  var input, filter, items, i;
+  input = document.getElementById('search');
+  filter = input.value.toUpperCase();
+  items = document.getElementsByClassName('project-card');
+
+  for (i = 0; i < items.length; i++) {
+      if (items[i].getAttribute('tags').toUpperCase().indexOf(filter) > -1) {
+          items[i].style.display = "";
+      } else {
+          items[i].style.display = "none";
+      }
+  }
+}
+</script>
+<div class="container p-4" id="projects-page">
+      <div class="row m-0">
+        <div class="col-md-6">
+            <h1 class="page-title">Projects</h1>
+        </div>
+        <div class="col-md-6 d-flex align-items-center justify-content-center">
+             <input onkeyup="search_projects()" type="text" class="form-control" id="search" placeholder="TYPE A PROJECT, TECHNOLOGY, MENTOR">
+        </div>
+      </div>
+      <div class="row m-0">
+      {% for project in projects %}
+          <div class="col-md-4 px-2 py-4">
+            <div class="project-card" tags="{% for tag in project.tags.all %}{{tag.name}} {% endfor %} {{project.name}} {{project.author}}">
+                <a href="project/{{project.id}}"><h4>{{project.name}}</h4></a>
+                <a href="https://github.com/{{project.author}}}"><h6>@{{project.author}}</h6></a>
+                <a  class="project-button" href="project/{{project.id}}">Open Project</a>
+                <p>{{project.description}}</p>
+                <ul class="project-tags">
+                {% for tag in project.tags.all %}
+                    <li style="color: {{tag.colour}};">{{tag.name}}</li>
+                {% endfor %}
+                </ul>
+                  <a href="{{project.url}}" class="fa fa-github"></a>
+                  <a href="{{project.irc}}}" class="fa fa-comments"></a>
+            </div>
+          </div>
+      {% endfor %}
+      </div>
+</div>
+
+<style>
+#projects-page h1
+{
+  margin: 1.5rem 0;
+  text-shadow: 1px 1px 1px #999;
+}
+
+input#search {
+    border: 2px solid;
+    background: rgba(256,256,256,0.8);
+    text-transform: lowercase;
+    font-family: 'Montserrat',sans-serif;
+    width: 75%;
+}
+
+.project-card
+{
+  padding: 2rem;
+  border-radius: 0.3rem;
+  background: #2c2e43;
+  color: white;
+  text-align: center;
+  height: 100%;
+  box-shadow: 2px 3px 3px #777;
+}
+
+.project-card h4
+{
+  text-align: center;
+  padding: 1rem 0;
+  font-size: calc(1.2rem + 1vw);
+  line-height: 1.2;
+}
+
+.project-card a:hover
+{
+   text-decoration: none;
+   color: inherit;
+}
+
+.project-card .project-button
+{
+  margin-top: 1rem;
+  display: inline-block;
+  border: 1px solid;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3rem;
+  font-size: 80%;
+}
+
+.project-card a
+{
+    color: inherit;
+}
+
+.project-card h6
+{
+  font-weight: 500;
+}
+
+.project-card p
+{
+  font-size: 0.8rem;
+  padding: 1rem;
+  text-align: center;
+  margin: 0;
+  min-height: 108px
+}
+
+.project-card .fa
+{
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  font-size: calc(1rem + 1vw);
+}
+.project-card .fa:hover
+{
+  background: white;
+  color: #2c2e43;
+  text-decoration: none;
+}
+
+.project-tags
+{
+  padding: 0;
+  list-style: none;
+}
+
+.project-tags li
+{
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 0.3rem 0.8rem;
+  border-radius: 0.3rem;
+  font-size: 80%;
+  box-shadow: 2px 2px 2px;
+  font-weight: 900;
+}
+
+.project-tags li:hover
+{
+  box-shadow: none;
+}
+
+.project-card .project-button:hover
+{
+  background: white;
+  color: #2c2e43;
+}
+</style>
+{% endblock %}
