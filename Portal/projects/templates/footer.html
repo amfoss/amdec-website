@@ -1,27 +1,73 @@
+{% load static %}
 <footer>
-    <div>
+    <div id="contact">
         <div class="container p-2">
             <div class="row m-0">
-                  <div class="col-md-3">
+                  <div class="col-md-6 py-4">
+                    <h4>Find Us</h4>
+                        <div class="row py-4">
+                            <div class="col-md-6 col-8 text-white">
+                                <div><span class="fa fa-location-arrow"></span> Amrita School of Engineering, Amritapuri, Vallickavu, Karunagapally, Kerala 690525</div>
+                                <div class="py-2"><span class="fa fa-envelope"></span>  <a href="mailto:amritapurifoss@gmail.com" class="text-white">amritapurifoss@gmail.com</a></div>
+                            </div>
+                            <div class="col-md-6 col-4" id="social-links">
+                                <figure>
+                                    <a href="https://www.facebook.com/amfoss.in" class="icon"><i class="fa fa-facebook"></i> Facebook</a>
+                                </figure>
+                                <figure>
+                                    <a href="https://twitter.com/amfoss_in" class="icon"><i class="fa fa-twitter"></i> Twitter</a>
+                                </figure>
+                                <figure>
+                                	<a href="https://github.com/amfoss/" class="icon"><i class="fa fa-github"></i> GitHub</a>
+                                </figure>
+                                <figure>
+                                    <a href="https://www.instagram.com/amfoss.in/" class="icon"><i class="fa fa-instagram"></i> Instagram</a>
+                                </figure>
+								                <figure>
+                                    <a href="https://www.youtube.com/channel/UCfIO-HGaMKIsLEG1rObnWTA" class="icon"><i class="fa fa-youtube"></i> Youtube</a>
+                                </figure>
+                            </div>
+                        </div>
                   </div>
-                  <div class="col-md-3">
-                  </div>
-                  <div class="col-md-3">
-                  </div>
-                  <div class="col-md-3">
+                  <div class="col-md-6 py-4">
+                      <h4>Get in Touch</h4>
+                            <form id="contact-form" method="post" class="form clearfix inputs-underline" action="https://formspree.io/amritapurifoss@gmail.com">
+                                  <div class="row">
+                                      <div class="col-md-6 col-sm-6">
+                                          <div class="form-group">
+                                              <input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required="">
+                                          </div>
+                                      </div>
+                                      <div class="col-md-6 col-sm-6">
+                                          <div class="form-group">
+                                              <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required="">
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                      <div class="col-md-12">
+                                          <div class="form-group">
+                                              <textarea class="form-control" id="form-contact-message" rows="8" name="message" placeholder="Your Message" required=""></textarea>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="form-group clearfix">
+                                      <button type="submit" class="btn pull-right btn-primary" id="form-contact-submit">Send a Message</button>
+                                  </div>
+                                  <div class="form-contact-status"></div>
+                              </form>
                   </div>
             </div>
         </div>
     </div>
     <div id="sub-footer">
         <div class="row m-0">
-            <div class="col-md-4">
-
+            <div class="col-md-3">
+                  <a href="https://amrita.ac.in/"><img src="{% static 'image/amrita_logo.png' %}"></a>
+                  <a href="https://amfoss.in/"><img src="{% static 'image/amfoss_logo.png' %}"></a>
             </div>
-            <div class="col-md-4">
-                &copy; amFOSS 2019. All Rights Reserved.
-            </div>
-            <div class="col-md-4">
+            <div class="col-md-4 justify-content-center d-flex align-items-center">&copy; amFOSS 2018. All Rights Reserved.</div>
+            <div class="col d-flex justify-content-center align-items-center">
                 <ul>
                     <li>Terms & Conditions</li>
                     <li>Privacy Policy</li>
@@ -41,6 +87,47 @@ footer .container
 {
   min-height: 60vh;
 }
+
+footer h4
+{
+  color: white;
+  font-size: calc(1.5rem + 1.5vw);
+  padding: 0.5rem 0;
+}
+
+footer a
+{
+    color: #eee;
+}
+
+footer a:hover
+{
+    text-decoration: none;
+    color: #fff;
+}
+
+#contact-form
+{
+    padding: 1rem 0;
+}
+
+#contact-form input, #contact-form textarea {
+    border: 1px solid;
+    background: rgba(0,0,0,0.2);
+}
+
+#contact-form button {
+    background: none;
+    border: 1px solid #777;
+    color: #999;
+}
+
+#contact-form button:hover {
+    background: #eee;
+    border: 1px solid #999;
+    color: #2c2e43;
+}
+
 #sub-footer .col-md-4
 {
     display: flex!important;
@@ -51,16 +138,24 @@ footer .container
   background: #222;
   padding: 1rem;
   text-align: center;
+  font-size: 0.7rem;
 }
 #sub-footer ul
 {
   list-style: none;
   padding: 0;
   margin: 0;
+  font-size: 0.8rem;
 }
 #sub-footer li
 {
   padding: 0.3rem;
+  font-size: 0.7rem;
+  color: #bbb;
   display: inline-block;
+}
+#sub-footer img
+{
+   height: 3rem;
 }
 </style>

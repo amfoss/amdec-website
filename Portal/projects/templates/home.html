@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% block title %}Home{% endblock %}
 {% block content %}
-<div id="particles-js"></div>
+<div>
+  <div id="particles-js"></div>
+</div>
 <section id="cover">
-    {% include 'topbar.html' %}
     <div id="cover-title" class="d-flex align-items-center justify-content-center">
-        <div class="container p-2">
-          <h1>Amrita Season of Code</h1>
-          <a href="" class="btn">Projects</a>
-          <a href="" class="btn">Register Now</a>
+        <div class="container p-4">
+          <h1>Begin your Open Source Journey</h1>
+          <a href="{% url 'projects' %}" class="btn">Projects</a>
+          <a href="#" class="btn btn-white">Register Now</a>
         </div>
     </div>
     <script>
@@ -19,28 +20,82 @@
      #particles-js{ position:absolute; width: 100%; height: 100%; background: #2c2e43; background-image: url(""); background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
     </style>
 </section>
-<section id="about">
+<section id="about" class="d-flex justify-align-items align-items-center p-4">
+  <div class="container">
+      <h3>About ASoC</h3>
+      <p class="pb-4">
+         Amrita Season of Code is a 5-week long online programme conducted by FOSS@Amrita, for the students of Amrita University,
+         who are new to the world of open source software development. The participants through the programme
+         will contribute to the projects of ASoC mentors, and will be guided by them. The programme not only
+         helps students to start contributing to open source, but also prepare them for Google Sumer of Code.
+      </p>
+  </div>
+</section>
+<section id="timeline" class="d-flex justify-align-items align-items-center p-4">
+  <div class="container ">
+      <h3 class="text-center">Timeline</h3>
+      <div class="d-flex justify-content-center align-items-center">
+          <div>
+                <div class="event_card">
+                  <div class="date">Nov 18</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event">Registrations are open for the students.</div>
+                </div>
+                <div class="event_card">
+                  <div class="date">Nov 26</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event">Registrations are closed.</div>
+                </div>
+                <div class="event_card">
+                  <div class="date">Dec 16</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event">ASoC Begins</div>
+                </div>
+                <div class="event_card">
+                  <div class="date">Dec 29</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event">Mid Evaluation</div>
+                </div>
+                <div class="event_card">
+                  <div class="date">Jan 20</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event">Final evaluation and report submission</div>
+                </div>
+                <div class="event_card">
+                  <div class="date">Jan 24</div>
+                  <div class="dots"><i class="fa fa-dot-circle-o"></i></div>
+                  <div class="event"> Results Announced</div>
+                </div>
+            </div>
+      </div>
+  </div>
+</section>
+<section id="faq">
+      <div class="container">
+          <h3>Frequently Asked Questions</h3>
+          <ul class="questions py-4">
+                <li>
+                      <div class="question">Who is eligible to participate? </div>
+                      <div class="answer">Anyone pursuing a degree programme in Amrita Vishwa Vidyapeetham (including Amritapuri, Coimbatore & Bengaluru Campuses) are eligible to participate.</div>
+                </li>
+          </ul>
+      </div>
 </section>
 <style>
-body
-{
-  font-family: 'PT Sans', sans-serif;
-}
-h1,h2,h3,h4,h5,h6
-{
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-}
 #cover
 {
    min-height: 100vh;
    position: relative;
+   top: 3rem;
 }
 
 #cover h1
 {
   color: white;
-  font-size: calc(1.5rem + 3.5vw);
+  font-size: calc(1.5rem + 3vw);
+  width: 75%;
+  padding-bottom: 2rem;
+  text-shadow: 2px 5px 5px #333;
 }
 
 #cover a
@@ -60,14 +115,139 @@ h1,h2,h3,h4,h5,h6
   color: #2c2e43;
 }
 
+#cover .btn-white
+{
+  background: white;
+  color: #2c2e43;
+}
+
+#cover .btn-white:hover
+{
+  border: 1px solid white;
+  color: white;
+  background: none;
+}
+
 #cover-title
 {
    min-height: 80vh;
 }
-#about
+section
 {
-  min-height: 100vh;
-  background: white;
+  min-height: 60vh;
+}
+section h3
+{
+    font-size: calc(2rem + 2vw);
+    padding-bottom: 1.5rem;
+}
+section h4
+{
+  font-size: calc(1.3rem + 1.3vw);
+  padding-bottom: 1.5rem;
+}
+section p
+{
+  padding: 0.5rem 0;
+  padding-right: 10vw;
+  font-size: 110%;
+}
+
+#timeline
+{
+    background: #2c2e43;
+    color: white;
+    min-height: 100vh;
+}
+
+
+#timeline .event_card
+{
+   display: flex;
+}
+}
+
+#timeline .event_card > .date
+{
+    font-size: calc(1rem + 0.8vw);
+    font-weight: 900;
+    font-family: 'Montserrat',sans-serif;
+    width: 25%;
+}
+
+.date
+{
+  padding: 1rem 0.8rem 1rem 0rem;
+  font-family: 'Montserrat',sans-serif;
+  font-size: calc(1rem + 0.6vw);
+  font-weight: 900;
+  display: flex;
+  width: 30%;
+  align-items: center;
+  justify-content: left;
+  text-shadow: 2px 2px 5px #222;
+}
+
+.dots
+{
+  width: 2%;
+  align-items: center;
+  display: flex;
+  background: #FF4500;
+  font-size: 1.5rem;
+  justify-content: center;
+}
+
+.event
+{
+  padding: 0.5rem 2rem;
+  width: 73%;
+  align-items: center;
+  display: flex;
+  text-shadow: 1px 2px 2px #222;
+}
+
+#faq
+{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.questions
+{
+    list-style: none;
+    padding: 0;
+}
+
+.questions li {
+    background: white;
+    padding: 0.5rem;
+    margin: 1rem;
+    box-shadow: 1px 3px 1px #777;
+}
+
+.question {
+    padding: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+.answer {
+    display: none;
+    padding: 0.5rem;
 }
 </style>
+<script>
+$('.questions li').click(function() {
+    if($(this).children( ".answer" ).css('display')=='none')
+    {
+      $(this).children( ".answer" ).show();
+      $(this).children( "." ).addClasss('fa fa-angle-up');
+    }
+    else {
+      $(this).children( ".answer" ).hide();
+    }
+});
+</script>
 {% endblock %}

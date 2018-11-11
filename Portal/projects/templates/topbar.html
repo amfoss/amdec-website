@@ -1,34 +1,35 @@
 {% load static %}
 <nav>
-  <div class="container">
+  <div class="container p-1">
       <div class="row m-0">
-            <div class="col-md-3">
-                <img src="{% static '/image/logo_light.png' %}">
+            <div class="col-md-3 col-6 text-center px-2">
+                <a href="{% url 'home' %}"><img src="{% static '/image/logo_light.png' %}"></a>
             </div>
-            <div class="col-md-9">
-                <ul id="menu">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>ASoC 2018 <span class="fa fa-angle-down"></span>
-                        <ul>
-                            <li>Guidelines</li>
-                            <li>Rules</li>
-                            <li>FAQ</li>
-                        </ul>
-                    </li>
-                    <li>Project</li>
-                    <li>Statistics</li>
-                </ul>
+            <div class="col-md-9 col-6 d-flex align-items-center px-2">
+                <div class="d-none d-md-block">
+                    <ul id="nav-links" >
+                        <li><a href="{% url 'home' %}">Home</a></li>
+                        <li><a href="{% url 'home' %}#about">About</a></li>
+                        <li><a href="{% url 'projects' %}">Projects</a></li>
+                        <li><a href="#">Statistics</a></li>
+                        <li><a href="#">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
             </div>
       </div>
   </div>
 </nav>
-
 <style>
 nav
 {
   color: white;
-  padding: 0.5rem;
+  background: #2c2e43;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+  box-shadow: 1px 3px 8px #222;
 }
 nav .col
 {
@@ -38,24 +39,36 @@ nav .col
 nav img
 {
   width: 80%;
+  max-width: 135px;
 }
-#menu
+#nav-links
 {
     list-style: none;
-    padding: 1.5rem;
-    font-weight: 900;
     margin: 0;
+    font-size: calc(0.6rem + 0.4vw);
+    font-weight: 900;
+    text-transform: uppercase;
 }
-#menu li
+#nav-links li
 {
-  display: inline-block;
-  padding: 0 1.5rem;
-  font-size: calc(0.8rem + 0.6vw);
-  font-family: 'Montserrat';
-  font-weight: 500;
+    padding: 0.2rem 1.5rem;
+    display: inline-block;
+    margin: 0;
+    border-right: 1.5px solid #aaa
 }
-#menu li > ul
+#nav-links li:last-child
 {
-  display: none;
+    border-right: none;
+}
+#nav-links a
+{
+    color: white;
+    padding: 0.5rem 0;
+}
+#nav-links a:hover
+{
+    text-decoration: none;
+    border-bottom: 2px solid white;
+    transition: 1s;
 }
 </style>
