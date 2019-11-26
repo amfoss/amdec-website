@@ -1,0 +1,238 @@
+@import '~bulma/bulma'
+@import '~katex/dist/katex.min.css'
+
+$family-sans-serif: 'Quicksand', sans-serif
+$footer-background-color: whitesmoke
+$body-size: 18px
+
+*
+  transition: background-color 0.2s
+
+html
+  background-color: #363636
+
+footer.is-dark
+  background-color: #363636 !important
+  color: whitesmoke
+
+.hero.is-dark
+  a:hover
+    color: #dbdbdb !important
+
+.section
+  &.has-background-light
+    hr
+      background-color: #e7e9ee
+
+    p > code
+      background-color: white
+
+  &.has-background-dark
+    a
+      &:hover
+        color: #dbdbdb
+
+      color: whitesmoke
+      text-decoration: none
+
+    hr
+      background-color: rgba(255, 255, 255, 0.08)
+
+    code
+      background-color: #272822
+
+    blockquote
+      background-color: #363636 !important
+
+.content
+  &.has-text-light
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong
+      color: whitesmoke !important
+
+
+    .anchor > svg
+      fill: whitesmoke
+      &:hover
+        fill: #dbdbdb
+
+
+  &.has-text-dark
+    a,
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong
+      color: #363636 !important
+
+
+  code
+    border-radius: 4px
+
+  a
+    text-decoration: underline
+
+  .katex
+    font: inherit
+
+  .tag,
+  .number
+    display: inline
+    padding: inherit
+    font-size: inherit
+    line-height: inherit
+    text-align: inherit
+    vertical-align: inherit
+    border-radius: inherit
+    font-weight: inherit
+    white-space: inherit
+    background: inherit
+    margin: inherit
+
+  pre[class*='language-']
+    margin: 1rem 2rem
+
+.animated
+  box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.3)
+  transition: box-shadow 0.5s
+  will-change: transform
+
+  &:hover
+    box-shadow: 0 30px 100px -10px rgba(0, 0, 0, 0.4)
+
+  &.animated-card
+    height: 100%
+    border-radius: $radius
+
+    .card
+      &.is-project
+        height: 100%
+        border-radius: $radius
+
+        .image
+          height: 180px
+          border-top-left-radius: $radius
+          border-top-right-radius: $radius
+
+
+.badge
+  display: inline-block
+  margin-bottom: 10px
+  margin-right: 15px
+  padding: 0.5rem
+
+
+.timeline-container
+  display: flex
+  flex-direction: column
+  position: relative
+  margin: 40px 0
+
+.timeline-container::after
+  background-color: #e17b77
+  content: ''
+  position: absolute
+  left: calc(50% - 2px)
+  width: 4px
+  height: 100%
+
+
+.timeline-item
+  display: flex
+  justify-content: flex-end
+  padding-right: 30px
+  position: relative
+  margin: 10px 0
+  width: 50%
+
+.timeline-item:nth-child(odd)
+  align-self: flex-end
+  justify-content: flex-start
+  padding-left: 30px
+  padding-right: 0
+
+.timeline-item-content
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3)
+  border-radius: 5px
+  display: flex
+  flex-direction: column
+  align-items: flex-end
+  padding: 20px
+  position: relative
+  width: 300px
+  max-width: 70%
+  text-align: right
+
+
+.timeline-item-content::after
+  content: ' '
+  box-shadow: 1px -1px 1px rgba(0, 0, 0, 0.2)
+  position: absolute
+  right: -7.5px
+  top: calc(50% - 7.5px)
+  transform: rotate(45deg)
+  width: 15px
+  height: 15px
+
+.timeline-item:nth-child(odd) .timeline-item-content
+  text-align: left
+  align-items: flex-start
+
+.timeline-item:nth-child(odd) .timeline-item-content::after
+  right: auto
+  left: -7.5px
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.2)
+
+.timeline-item-content time
+  color: #777
+  font-size: 12px
+  font-weight: bold
+
+.timeline-item-content p
+  font-size: 16px
+  line-height: 24px
+  margin: 15px 0
+  max-width: 250px
+
+.timeline-item-content a
+  font-size: 14px
+  font-weight: bold
+
+.timeline-item-content a::after
+  content: ' ►'
+  font-size: 12px
+
+.timeline-item-content .circle
+  border: 3px solid #e17b77
+  border-radius: 50%
+  position: absolute
+  top: calc(50% - 10px)
+  right: -40px
+  width: 20px
+  height: 20px
+  z-index: 100
+
+.timeline-item:nth-child(odd) .timeline-item-content .circle
+  right: auto
+  left: -40px
+
+@media only screen and (max-width: 600px)
+  .timeline-item-content
+    width: 500px
+    max-width: 100%
+
+  .title
+    font-size: 5vh!important
+
+  .button
+    width: 40vw!important
