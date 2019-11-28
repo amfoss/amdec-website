@@ -27,12 +27,12 @@ const Header = () => {
           >
               <NavbarEnd>
                   <NavbarItem>
-                      <Link
-                          to={`/project-submission`}
+                      <a
+                          href={`#`}
                           className={`navbar-item has-text-${getOppositeTheme(theme)}`}
                       >
-                          Project Submission
-                      </Link>
+                          Want to be a Mentor ?
+                      </a>
                   </NavbarItem>
                   <NavbarItem>
                       <div
@@ -46,7 +46,7 @@ const Header = () => {
                   <NavbarItem>
                       <div
                           style={{cursor: 'pointer'}}
-                          onClick={()=> scrollTo('#projects-cards')}
+                          onClick={()=> scrollTo('#projects')}
                           className={`navbar-item has-text-${getOppositeTheme(theme)}`}
                       >
                           Projects

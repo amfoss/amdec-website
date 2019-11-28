@@ -27,7 +27,8 @@ const Footer = () => {
                           </a>
                         </strong>
                         <br />
-                          A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.                     </p>
+                          A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.
+                      </p>
                     </MediaContent>
                   </Media>
                 </LevelItem>

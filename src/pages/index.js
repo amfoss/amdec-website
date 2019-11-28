@@ -24,6 +24,8 @@ import { ThemeContext, getOppositeTheme } from '../contexts/theme';
 import ASoCDark from '../images/ASoCLogo.png';
 import ASoCWhite from '../images/ASoC-White.png';
 import timelineData from "../components/Data";
+import Particles from "react-particles-js"
+
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
   const { data, location } = props;
@@ -34,6 +36,124 @@ const ProjectsIndex = props => {
     <Layout location={location}>
       <SEO title={siteTitle} />
       <Hero isColor={theme} className="is-fullheight-with-navbar">
+        {theme === 'dark' ?
+            <Particles
+                style={{position: 'absolute'}}
+                canvasClassName="particleBg"
+                params={{
+                  "particles": {
+                    "number": {
+                      "value": 150,
+                      "density": {
+                        "enable": false
+                      }
+                    },
+                    "color":{
+                      "value": '#fff'
+                    },
+                    "size": {
+                      "value": 3,
+                      "random": true,
+                      "anim": {
+                        "speed": 10,
+                        "size_min": 0.3
+                      }
+                    },
+                    "line_linked": {
+                      "enable": false
+                    },
+                    "move": {
+                      "random": true,
+                      "speed": 3,
+                      "direction": "down",
+                      "out_mode": "out"
+                    }
+                  },
+                  "interactivity": {
+                    "events": {
+                      "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                      },
+                      "onclick": {
+                        "enable": true,
+                        "mode": "repulse"
+                      }
+                    },
+                    "modes": {
+                      "bubble": {
+                        "distance": 50,
+                        "duration": 2,
+                        "size": 0,
+                        "opacity": 0
+                      },
+                      "repulse": {
+                        "distance": 40,
+                        "duration": 4
+                      }
+                    }
+                  }
+                }}
+            />:
+            <Particles
+                style={{position: 'absolute'}}
+                canvasClassName="particleBg"
+                params={{
+                  "particles": {
+                    "number": {
+                      "value": 150,
+                      "density": {
+                        "enable": false
+                      }
+                    },
+                    "color":{
+                      "value": '#363636'
+                    },
+                    "size": {
+                      "value": 3,
+                      "random": true,
+                      "anim": {
+                        "speed": 10,
+                        "size_min": 0.3
+                      }
+                    },
+                    "line_linked": {
+                      "enable": false
+                    },
+                    "move": {
+                      "random": true,
+                      "speed": 3,
+                      "direction": "down",
+                      "out_mode": "out"
+                    }
+                  },
+                  "interactivity": {
+                    "events": {
+                      "onhover": {
+                        "enable": true,
+                        "mode": "bubble"
+                      },
+                      "onclick": {
+                        "enable": true,
+                        "mode": "repulse"
+                      }
+                    },
+                    "modes": {
+                      "bubble": {
+                        "distance": 50,
+                        "duration": 2,
+                        "size": 0,
+                        "opacity": 0
+                      },
+                      "repulse": {
+                        "distance": 40,
+                        "duration": 4
+                      }
+                    }
+                  }
+                }}
+            />
+        }
         <HeroBody>
           <Container>
             <Level className="has-text-centered-mobile">
@@ -52,7 +172,7 @@ const ProjectsIndex = props => {
                         Amrita Season of Code is a 5-week long online programme for the students.
                       </Typist>
                       <Link to="#">
-                        <Button isColor={getOppositeTheme(theme)} style={{marginTop: '1.2rem', width: '15vw'}} isOutlined>Register</Button>
+                        <Button isColor={getOppositeTheme(theme)} className="register" style={{marginTop: '1.2rem', width: '15vw'}} isOutlined>Register</Button>
                       </Link>
                     </Subtitle>
                   </Title>
@@ -63,7 +183,7 @@ const ProjectsIndex = props => {
         </HeroBody>
       </Hero>
       <Hero id="timeline" isColor={theme}>
-        <Title className="has-text-centered">Timeline</Title>
+        <Title className="has-text-centered" style={{fontWeight: '900'}}>Timeline</Title>
         <HeroBody>
           <Container>
             <Fade down>
@@ -84,9 +204,9 @@ const ProjectsIndex = props => {
       </Hero>
       {
         projects.length > 0 ?
-            <Hero id="projects-cards" isColor={theme}>
+            <Hero id="projects" isColor={theme}>
               <HeroBody>
-                <Title className="has-text-centered">Projects</Title>
+                <Title className="has-text-centered" style={{fontWeight: '900'}}>Projects</Title>
                 <Container>
                   <Fade>
                     <Columns isMultiline>
