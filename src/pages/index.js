@@ -25,6 +25,8 @@ import ASoCDark from '../images/ASoCLogo.png';
 import ASoCWhite from '../images/ASoC-White.png';
 import timelineData from "../components/Data";
 import Particles from "react-particles-js"
+import About from "../components/about";
+import Why from "../components/Why";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -182,6 +184,8 @@ const ProjectsIndex = props => {
           </Container>
         </HeroBody>
       </Hero>
+      <About/>
+      <Why/>
       <Hero id="timeline" isColor={theme}>
         <Title className="has-text-centered" style={{fontWeight: '900'}}>Timeline</Title>
         <HeroBody>

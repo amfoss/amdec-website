@@ -1,6 +1,6 @@
 import { createContext } from 'react';
 
-const ThemeContext = createContext('light');
+const ThemeContext = createContext('dark');
 
 const getOppositeTheme = theme => (theme === 'light' ? 'dark' : 'light');
 

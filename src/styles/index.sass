@@ -1,5 +1,6 @@
 @import '~bulma/bulma'
 @import '~katex/dist/katex.min.css'
+@import url("https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
 
 $family-sans-serif: 'Quicksand', sans-serif
 $footer-background-color: whitesmoke
@@ -7,6 +8,10 @@ $body-size: 18px
 
 *
   transition: background-color 0.2s
+
+a
+  &:hover
+    text-decoration: none
 
 html
   background-color: #363636
@@ -172,7 +177,7 @@ footer.is-dark
   align-items: flex-end
   padding: 20px
   position: relative
-  width: 300px
+  width: 500px
   max-width: 70%
   text-align: right
 

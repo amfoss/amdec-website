@@ -31,8 +31,26 @@ const Header = () => {
                           href={`#`}
                           className={`navbar-item has-text-${getOppositeTheme(theme)}`}
                       >
-                          Want to be a Mentor ?
+                          Want to be a mentor ?
                       </a>
+                  </NavbarItem>
+                  <NavbarItem>
+                      <div
+                          style={{cursor: 'pointer'}}
+                          onClick={()=> scrollTo('#about')}
+                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                      >
+                          About
+                      </div>
+                  </NavbarItem>
+                  <NavbarItem>
+                      <div
+                          style={{cursor: 'pointer'}}
+                          onClick={()=> scrollTo('#why')}
+                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                      >
+                          Why ASoC ?
+                      </div>
                   </NavbarItem>
                   <NavbarItem>
                       <div
