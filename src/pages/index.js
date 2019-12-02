@@ -190,19 +190,17 @@ const ProjectsIndex = props => {
         <Title className="has-text-centered" style={{fontWeight: '900'}}>Timeline</Title>
         <HeroBody>
           <Container>
-            <Fade down>
               <div className={`timeline-container`} style={{backgroundColor: getOppositeTheme(theme)}}>
-                {timelineData.map((data, idx) => (
-                    <div key={idx} className="timeline-item">
-                      <div className={`timeline-item-content`}>
-                        <time>{data.date}</time>
-                        <p style={{fontWeight: '900', fontSize: '3vh'}}>{data.text}</p>
-                        <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
+                  {timelineData.map((data, idx) => (
+                      <div key={idx} className="timeline-item">
+                          <div className={`timeline-item-content`}>
+                              <time>{data.date}</time>
+                              <p style={{fontWeight: '900', fontSize: '3vh'}}>{data.text}</p>
+                              <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
+                          </div>
                       </div>
-                    </div>
-                ))}
+                  ))}
               </div>
-            </Fade>
           </Container>
         </HeroBody>
       </Hero>

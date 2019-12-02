@@ -57,9 +57,11 @@ const FAQ = () => {
                             </div>
                         ))}
                         <div className="col-md-6">
-                            <div className={`py-3 m-2 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`}>
-                                <b>Want to see More ?</b>
-                            </div>
+                            <a href="https://amfoss.in">
+                                <div className={`py-3 m-2 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`}>
+                                    <b>Want to see More ?</b>
+                                </div>
+                            </a>
                         </div>
                     </div>
                 </Container>

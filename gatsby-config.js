@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `ASoC`,
+    title: `amDeC`,
     author: `amfoss`,
     language: `en`,
     siteUrl: `https://asoc.amfoss.in`,

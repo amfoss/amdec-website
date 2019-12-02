@@ -16,7 +16,7 @@ const Header = () => {
           <NavbarBrand>
               <Link to={`/`} className="navbar-item">
                   <img src={ASoC} alt="ASoC" style={{height: '5vh'}}/>
-                  <b style={{ marginLeft: '0.5rem' }}>ASoC</b>
+                  <b style={{ marginLeft: '0.5rem' }}>amDeC</b>
               </Link>
               <NavbarBurger isActive={isActive} onClick={toggleIsActive} />
           </NavbarBrand>
