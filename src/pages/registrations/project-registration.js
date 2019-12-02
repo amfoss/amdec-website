@@ -5,7 +5,7 @@ import dataFetch from '../../utils/dataFetch';
 
 import Layout from '../../components/layout';
 import SEO from '../../components/seo';
-import {ThemeContext} from "../../contexts/theme";
+import  {ThemeContext} from "../../contexts/theme";
 
 const ProjectRegistration = props => {
     const { theme } = useContext(ThemeContext);
@@ -81,7 +81,6 @@ const ProjectRegistration = props => {
         <Layout location={location} title={siteTitle}>
             { !loading ?
                 <form
-                    className="form-group"
                     onSubmit={e => {
                         setLoading(true);
                         register();
@@ -89,15 +88,15 @@ const ProjectRegistration = props => {
                     }}>
                     <SEO title="Project Registation" />
                     <Hero isColor={theme} isSize="medium">
-                        <Title className="has-text-centered mt-2">Project Registration</Title>
                         <HeroBody>
+                            <Title className="has-text-centered">Project Registration</Title>
                             <Container>
                                 <div className={`forms card`}>
                                     <Title className={`has-text-dark p-4`}>Mentor Info</Title>
                                     <div className="row m-0 px-4 pb-4">
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Name *(required field)</label>
+                                                <label>Name *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Full Name"
@@ -109,7 +108,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Phone *(required field)</label>
+                                                <label>Phone *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Phone Number"
@@ -121,7 +120,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Email *(required field)</label>
+                                                <label>Email *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Email"
@@ -133,7 +132,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-sm-6 p-0">
                                             <div className="m-2">
-                                                <label>Gender *(required field)</label>
+                                                <label>Gender *</label>
                                                 <select className="form-control text-dark" onChange={e => setGender(e.target.value)}>
                                                     <option value="" hidden disabled selected>Select Gender</option>
                                                     <option value="male">Male</option>
@@ -144,7 +143,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Age *(required field)</label>
+                                                <label>Age *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Age"
@@ -156,7 +155,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-sm-6 p-0">
                                             <div className="m-2">
-                                                <label>University *(required field)</label>
+                                                <label>University *</label>
                                                 <select className="form-control text-dark" onChange={e => setUniversity(e.target.value)}>
                                                     <option value="" hidden disabled selected>Select University/School</option>
                                                     <option value="university">University</option>
@@ -166,7 +165,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Instution Name *(required field)</label>
+                                                <label>Instution Name *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Institution Name"
@@ -190,7 +189,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>About *(required field)</label>
+                                                <label>About *</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Enter about you"
@@ -207,7 +206,7 @@ const ProjectRegistration = props => {
                                     <div className="row m-0 px-4 pb-4">
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Project Name *(required field)</label>
+                                                <label>Project Name *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Project Name"
@@ -219,7 +218,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Repo Link *(required field)</label>
+                                                <label>Repo Link *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Code Repo Link"
@@ -231,7 +230,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>Repo Link *(required field)</label>
+                                                <label>Repo Link *</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Describe your project"
@@ -243,7 +242,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Tech Stack *(required field)</label>
+                                                <label>Tech Stack *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Tech Stack"
@@ -255,7 +254,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Approximate Time *(required field)</label>
+                                                <label>Approximate Time *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Approximate Time Required for the proposed projects by Milestones (Week-wise)"
@@ -267,7 +266,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>Community *(required field)</label>
+                                                <label>Community *</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Are there any current users?, Who would be the potential users of your project?, How is the project going to be useful for the community?"
@@ -279,7 +278,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>Impact in Users *(required field)</label>
+                                                <label>Impact in Users *</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="What are the current solutions available that solve the same problem?, How is your project different / better than the existing solutions?"
@@ -291,11 +290,11 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>Current state of the project *(required field)</label>
+                                                <label>Current state of the project *</label>
                                                 <textarea
                                                     placeholder="What is the current state of the project (implementation),
-                                                     how much work is done?,
-                                                     How often are you working on it?, Are there any other collaborators working on the project?"
+                                                         how much work is done?,
+                                                         How often are you working on it?, Are there any other collaborators working on the project?"
                                                     rows="5" cols="50"
                                                     name="projectdoing"
                                                     className="form-control"
@@ -305,7 +304,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>Why should we select ? *(required field)</label>
+                                                <label>Why should we select ? *</label>
                                                 <textarea
                                                     placeholder="Why should we select the project for this program?"
                                                     rows="5" cols="50"
@@ -317,7 +316,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
-                                                <label>What do you expect from amFOSS? *(required field)</label>
+                                                <label>What do you expect from amFOSS? *</label>
                                                 <textarea
                                                     placeholder="What do you expect from amFOSS?"
                                                     rows="5" cols="50"

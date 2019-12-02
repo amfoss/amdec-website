@@ -85,7 +85,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#363636`,
         display: `minimal-ui`,
-        icon: `${__dirname}/src/images/asoc.png`
+        icon: `${__dirname}/src/images/amdec_global.png`
       }
     },
     `gatsby-plugin-offline`,

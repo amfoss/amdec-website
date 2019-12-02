@@ -3,7 +3,8 @@ import { Link } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import {Button, Icon, Navbar, NavbarBrand, NavbarBurger, NavbarEnd, NavbarItem, NavbarMenu} from 'bloomer';
 import { ThemeContext, getOppositeTheme } from '../contexts/theme';
-import ASoC from '../images/asoc.png';
+import amDeCLight from '../images/amdec_white.png';
+import amDeCDark from '../images/amdec_black.png';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -21,8 +22,7 @@ const Header = () => {
       <Navbar className={`is-${theme}`}>
           <NavbarBrand>
               <Link to={`/`} className="navbar-item">
-                  <img src={ASoC} alt="ASoC" style={{height: '5vh'}}/>
-                  <b style={{ marginLeft: '0.5rem' }}>amDeC</b>
+                  {theme === 'dark' ? <img src={amDeCLight} alt="ASoC" style={{height: '5vh'}}/>: <img src={amDeCDark} alt="ASoC" style={{height: '5vh'}}/>}
               </Link>
               <NavbarBurger isActive={isActive} onClick={toggleIsActive} />
           </NavbarBrand>
