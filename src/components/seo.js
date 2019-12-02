@@ -28,7 +28,7 @@ function SEO({ lang, meta, title, type }) {
       titleTemplate={
         site.siteMetadata.title === title
           ? title
-          : `%s | ${site.siteMetadata.title}`
+          : `%s | ${site.siteMetadata.title} | amFOSS`
       }
       meta={[
         {

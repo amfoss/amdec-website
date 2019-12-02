@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `amDeC`,
+    title: `amDeC | amFOSS`,
     author: `amfoss`,
     language: `en`,
     siteUrl: `https://asoc.amfoss.in`,
@@ -83,7 +83,7 @@ module.exports = {
         short_name: `ASoC`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#363636`,
+        theme_color: `#000000`,
         display: `minimal-ui`,
         icon: `${__dirname}/src/images/amdec_global.png`
       }

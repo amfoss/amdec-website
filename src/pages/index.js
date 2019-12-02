@@ -268,7 +268,7 @@ const ProjectsIndex = props => {
                       <div key={idx} className="timeline-item">
                           <div className={`timeline-item-content`} style={{border: '1.5px solid white'}}>
                               <time>{data.date}</time>
-                              <p style={{fontWeight: '730', fontSize: '2.8vh', letterSpacing: '1.2px'}}>{data.text}</p>
+                              <p style={{fontWeight: '730', fontSize: '2.8vh', letterSpacing: '0.2vh'}}>{data.text}</p>
                               <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
                           </div>
                       </div>
