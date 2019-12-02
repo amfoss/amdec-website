@@ -33,12 +33,12 @@ const Header = () => {
           >
               <NavbarEnd>
                   <NavbarItem>
-                      <a
-                          href={`#`}
+                      <Link
+                          to="/registrations/project-registration"
                           className={`navbar-item has-text-${getOppositeTheme(theme)}`}
                       >
                           Want to be a mentor ?
-                      </a>
+                      </Link>
                   </NavbarItem>
                   {url === 'http://localhost:8000/' ?
                     <>
