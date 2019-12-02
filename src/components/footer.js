@@ -99,6 +99,18 @@ const Footer = () => {
                 </LevelItem>
               </LevelRight>
             </Level>
+            <div className="row m-0">
+              <div className="col-sm-4">
+              <p>
+                <a href="https://drive.google.com/file/d/1yY5Gs2XUDVFk5quI0vkKhpQnS9Boqn7P/view" target="_blank" style={{color: 'white'}}>
+                  Code of Conduct
+                </a>
+              </p>
+              </div>
+              <div className="col-sm-4">
+                <div className="has-text-centered" style={{marginTop: '10px'}}>(C) 2019 amFOSS. All Rights Reserved</div>
+              </div>
+            </div>
           </Container>
         </BloomerFooter>
       )}
