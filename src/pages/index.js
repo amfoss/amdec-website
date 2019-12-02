@@ -27,6 +27,7 @@ import timelineData from "../components/Data";
 import Particles from "react-particles-js"
 import About from "../components/about";
 import Why from "../components/Why";
+import FAQ from "../components/faq";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -259,6 +260,7 @@ const ProjectsIndex = props => {
             </Hero>
         : null
       }
+      <FAQ/>
     </Layout>
   );
 };

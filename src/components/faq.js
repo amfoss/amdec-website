@@ -40,26 +40,31 @@ const FAQ = () => {
     console.log(show);
     return(
         <Hero id="about" isColor={theme}>
-            <Title className="has-text-centered" style={{fontWeight: '900'}}>FAQ</Title>
+            <Title className="has-text-centered" style={{fontWeight: '900'}}>FAQ's</Title>
             <HeroBody>
                 <Container>
                     <div className="row m-0 has-text-centered">
                         {FAQData.map((faq, index) => (
-                            <div className={`faq col-md-6`} style={{cursor: 'pointer'}}>
-                                <div className={`py-3 m-2 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`} key={index} onClick={e => setIds(show, index)}>
-                                    <b>{faq.question}</b>
-                                </div>
-                                {showId === index ?
-                                    <div className={`answer card p-2 m-2 has-background-${getOppositeTheme(theme)} has-text-${theme}`}>
-                                        <p>{faq.answer}</p>
+                            <>
+                                <div className="col-md-2" />
+                                <div className={`faq col-md-8`} style={{cursor: 'pointer'}}>
+                                    <div className={`py-3 m-2 card has-background-${getOppositeTheme(theme)} has-text-${theme}`} key={index} onClick={e => setIds(show, index)}>
+                                        <b>{faq.question}</b>
                                     </div>
-                                : null}
-                            </div>
+                                    {showId === index ?
+                                        <div className={`answer card p-2 m-2 has-background-${getOppositeTheme(theme)} has-text-${theme}`}>
+                                            <p>{faq.answer}</p>
+                                        </div>
+                                    : null}
+                                </div>
+                                <div className="col-md-2" />
+                            </>
                         ))}
-                        <div className="col-md-6">
+                        <div className="col-md-4" />
+                        <div className="col-md-4">
                             <a href="https://amfoss.in">
-                                <div className={`py-3 m-2 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`}>
-                                    <b>Want to see More ?</b>
+                                <div className={`py-3 m-2 card  has-background-${theme} has-text-${getOppositeTheme(theme)}`} style={{border: '2px solid white'}}>
+                                    <b>Want to see more ?</b>
                                 </div>
                             </a>
                         </div>

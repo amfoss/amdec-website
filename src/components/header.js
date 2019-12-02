@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, {useState, useContext, useEffect} from 'react';
 import { Link } from 'gatsby';
 import scrollTo from 'gatsby-plugin-smoothscroll';
 import {Button, Icon, Navbar, NavbarBrand, NavbarBurger, NavbarEnd, NavbarItem, NavbarMenu} from 'bloomer';
@@ -10,6 +10,12 @@ const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
   const toggleIsActive = () => setIsActive(!isActive);
   const toggleTheme = () => setTheme(getOppositeTheme(theme));
+  const [url, setURL] = useState('');
+
+  useEffect(() => {
+      setURL(window.location.href);
+      console.log(window.location.href);
+  });
 
   return (
       <Navbar className={`is-${theme}`}>
@@ -34,33 +40,37 @@ const Header = () => {
                           Want to be a mentor ?
                       </a>
                   </NavbarItem>
-                  <NavbarItem>
-                      <div
-                          style={{cursor: 'pointer'}}
-                          onClick={()=> scrollTo('#about')}
-                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
-                      >
-                          About
-                      </div>
-                  </NavbarItem>
-                  <NavbarItem>
-                      <div
-                          style={{cursor: 'pointer'}}
-                          onClick={()=> scrollTo('#why')}
-                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
-                      >
-                          Why amDeC ?
-                      </div>
-                  </NavbarItem>
-                  <NavbarItem>
-                      <div
-                          style={{cursor: 'pointer'}}
-                          onClick={()=> scrollTo('#timeline')}
-                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
-                      >
-                          Timeline
-                      </div>
-                  </NavbarItem>
+                  {url === 'http://localhost:8000/' ?
+                    <>
+                        <NavbarItem>
+                            <div
+                                style={{cursor: 'pointer'}}
+                                onClick={()=> scrollTo('#about')}
+                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                            >
+                                About
+                            </div>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <div
+                                style={{cursor: 'pointer'}}
+                                onClick={()=> scrollTo('#why')}
+                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                            >
+                                Why amDeC ?
+                            </div>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <div
+                                style={{cursor: 'pointer'}}
+                                onClick={()=> scrollTo('#timeline')}
+                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                            >
+                                Timeline
+                            </div>
+                        </NavbarItem>
+                    </>
+                  :null}
                   {/*<NavbarItem>*/}
                   {/*    <div*/}
                   {/*        style={{cursor: 'pointer'}}*/}
