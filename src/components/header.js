@@ -4,7 +4,6 @@ import scrollTo from 'gatsby-plugin-smoothscroll';
 import {Button, Icon, Navbar, NavbarBrand, NavbarBurger, NavbarEnd, NavbarItem, NavbarMenu} from 'bloomer';
 import { ThemeContext, getOppositeTheme } from '../contexts/theme';
 import amDeCLight from '../images/amdec_white.png';
-import amDeCDark from '../images/amdec_black.png';
 
 const Header = () => {
   const [isActive, setIsActive] = useState(false);
@@ -19,23 +18,23 @@ const Header = () => {
   });
 
   return (
-      <Navbar className={`is-${theme}`}>
+      <Navbar className={`is-dark`}>
           <NavbarBrand>
               <Link to={`/`} className="navbar-item">
-                  {theme === 'dark' ? <img src={amDeCLight} alt="ASoC" style={{height: '5vh'}}/>: <img src={amDeCDark} alt="ASoC" style={{height: '5vh'}}/>}
+                  <img src={amDeCLight} alt="ASoC" style={{height: '5vh'}}/>
               </Link>
               <NavbarBurger isActive={isActive} onClick={toggleIsActive} />
           </NavbarBrand>
           <NavbarMenu
               isActive={isActive}
               onClick={toggleIsActive}
-              className={`has-background-${theme}`}
+              className={`has-background-dark`}
           >
               <NavbarEnd>
                   <NavbarItem>
                       <Link
                           to="/registrations/project-registration"
-                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                          className={`navbar-item has-text-light`}
                       >
                           Want to be a mentor ?
                       </Link>
@@ -46,7 +45,7 @@ const Header = () => {
                             <div
                                 style={{cursor: 'pointer'}}
                                 onClick={()=> scrollTo('#about')}
-                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                                className={`navbar-item has-text-light`}
                             >
                                 About
                             </div>
@@ -55,7 +54,7 @@ const Header = () => {
                             <div
                                 style={{cursor: 'pointer'}}
                                 onClick={()=> scrollTo('#why')}
-                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                                className={`navbar-item has-text-light`}
                             >
                                 Why amDeC ?
                             </div>
@@ -64,7 +63,7 @@ const Header = () => {
                             <div
                                 style={{cursor: 'pointer'}}
                                 onClick={()=> scrollTo('#timeline')}
-                                className={`navbar-item has-text-${getOppositeTheme(theme)}`}
+                                className={`navbar-item has-text-light`}
                             >
                                 Timeline
                             </div>
@@ -82,13 +81,13 @@ const Header = () => {
                   {/*</NavbarItem>*/}
                   <NavbarItem>
                       <Button
-                          isColor={theme}
+                          isColor="dark"
                           onClick={toggleTheme}
                           title="Toggle Dark Theme"
                       >
                           <Icon
                               className="fas fa-moon"
-                              hasTextColor={theme === 'light' ? 'dark' : 'warning'}
+                              hasTextColor={theme === 'light' ? 'light' : 'warning'}
                           />
                       </Button>
                   </NavbarItem>
