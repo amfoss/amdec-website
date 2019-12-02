@@ -23,6 +23,6 @@ const About = () => {
             </HeroBody>
         </Hero>
     )
-}
+};
 
 export default About

@@ -5,7 +5,7 @@ cover: './cover.png'
 topic: Web Development
 mentors: ['Harshith Pabbati']
 mentorsEmail: ['pabbatiharshith@gmail.com']
-draft: false
+draft: true
 ---
 
 ## Topic - Web Development

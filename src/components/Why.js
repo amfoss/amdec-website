@@ -6,7 +6,7 @@ const Why = () => {
     const { theme } = useContext(ThemeContext);
     return(
         <Hero id="why" isColor={theme}>
-            <Title className="has-text-centered" style={{fontWeight: '900'}}>Why ASoC ?</Title>
+            <Title className="has-text-centered" style={{fontWeight: '900'}}>Why amDeC ?</Title>
             <HeroBody>
                 <Container>
                     <div className="row m-0 has-text-centered-mobile">

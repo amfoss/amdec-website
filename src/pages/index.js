@@ -165,13 +165,13 @@ const ProjectsIndex = props => {
                 </Fade>
                 <Fade right>
                   <Title style={{fontSize: '10vh', margin: '1rem', fontWeight: '900'}} className="has-text-centered">
-                    <Title style={{fontSize: '8vh', margin: '1rem', fontWeight: '900'}}>Amrita Season of Code</Title>
+                    <Title style={{fontSize: '8vh', margin: '1rem', fontWeight: '900'}}>amFOSS Developer Challenge</Title>
                     <Title style={{fontSize: '5vh', margin: '1rem', fontWeight: '900'}}>
                       2019
                     </Title>
                     <Subtitle style={{marginTop: '2rem', marginBottom: '2rem'}}>
                       <Typist startDelay={1000}>
-                        Amrita Season of Code is a 5-week long online programme for the students.
+                        amFOSS Developer Challenge is a 5-week long online programme for the students.
                       </Typist>
                       <Link to="#">
                         <Button isColor={getOppositeTheme(theme)} className="register" style={{marginTop: '1.2rem', width: '15vw'}} isOutlined>Register</Button>

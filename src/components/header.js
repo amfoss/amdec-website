@@ -49,7 +49,7 @@ const Header = () => {
                           onClick={()=> scrollTo('#why')}
                           className={`navbar-item has-text-${getOppositeTheme(theme)}`}
                       >
-                          Why ASoC ?
+                          Why amDeC ?
                       </div>
                   </NavbarItem>
                   <NavbarItem>
@@ -61,15 +61,15 @@ const Header = () => {
                           Timeline
                       </div>
                   </NavbarItem>
-                  <NavbarItem>
-                      <div
-                          style={{cursor: 'pointer'}}
-                          onClick={()=> scrollTo('#projects')}
-                          className={`navbar-item has-text-${getOppositeTheme(theme)}`}
-                      >
-                          Projects
-                      </div>
-                  </NavbarItem>
+                  {/*<NavbarItem>*/}
+                  {/*    <div*/}
+                  {/*        style={{cursor: 'pointer'}}*/}
+                  {/*        onClick={()=> scrollTo('#projects')}*/}
+                  {/*        className={`navbar-item has-text-${getOppositeTheme(theme)}`}*/}
+                  {/*    >*/}
+                  {/*        Projects*/}
+                  {/*    </div>*/}
+                  {/*</NavbarItem>*/}
                   <NavbarItem>
                       <Button
                           isColor={theme}
