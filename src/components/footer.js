@@ -10,7 +10,7 @@ const Footer = () => {
     <StaticQuery
       query={footerQuery}
       render={data => (
-        <BloomerFooter className={`is-${theme}`}>
+        <BloomerFooter className={`is-dark`}>
           <Container>
             <Level className="has-text-centered-mobile">
               <LevelLeft>
@@ -21,7 +21,7 @@ const Footer = () => {
                         <strong>
                           <a
                             href="https://amfoss.in/"
-                            className={`has-text-${getOppositeTheme(theme)}`}
+                            className={`has-text-light`}
                           >
                             amFOSS
                           </a>

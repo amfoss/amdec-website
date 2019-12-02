@@ -18,7 +18,7 @@ const Header = () => {
   });
 
   return (
-      <Navbar className={`is-dark`}>
+      <Navbar className={`is-black`}>
           <NavbarBrand>
               <Link to={`/`} className="navbar-item">
                   <img src={amDeCLight} alt="ASoC" style={{height: '5vh'}}/>
@@ -28,7 +28,7 @@ const Header = () => {
           <NavbarMenu
               isActive={isActive}
               onClick={toggleIsActive}
-              className={`has-background-dark`}
+              className={`has-background-black`}
           >
               <NavbarEnd>
                   <NavbarItem>
@@ -81,7 +81,7 @@ const Header = () => {
                   {/*</NavbarItem>*/}
                   <NavbarItem>
                       <Button
-                          isColor="dark"
+                          isColor="black"
                           onClick={toggleTheme}
                           title="Toggle Dark Theme"
                       >

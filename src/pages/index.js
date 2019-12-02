@@ -19,7 +19,6 @@ import SEO from '../components/seo';
 import Animated from '../components/animated';
 import { ThemeContext, getOppositeTheme } from '../contexts/theme';
 import amDeCBanLight from '../images/amdec_banner.png';
-import amDeCBanDark from '../images/amdec_banner_dark.png';
 import timelineData from "../components/Data";
 import Particles from "react-particles-js"
 import About from "../components/about";
@@ -35,7 +34,7 @@ const ProjectsIndex = props => {
   return (
     <Layout location={location}>
       <SEO title={siteTitle} />
-      <Hero isColor='dark' className="is-fullheight-with-navbar">
+      <Hero isColor='black' className="is-fullheight-with-navbar">
         <Particles
             style={{position: 'absolute'}}
             canvasClassName="particleBg"
@@ -157,19 +156,17 @@ const ProjectsIndex = props => {
       <Hero id="timeline" isColor={theme}>
         <Title className="has-text-centered" style={{fontWeight: '900'}}>Timeline</Title>
         <HeroBody>
-          <Container>
-              <div className={`timeline-container`} style={{backgroundColor: getOppositeTheme(theme)}}>
-                  {timelineData.map((data, idx) => (
-                      <div key={idx} className="timeline-item">
-                          <div className={`timeline-item-content`} style={{border: '1.5px solid white'}}>
-                              <time>{data.date}</time>
-                              <p style={{fontWeight: '730', fontSize: '2.8vh', letterSpacing: '0.2vh'}}>{data.text}</p>
-                              <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
-                          </div>
-                      </div>
-                  ))}
-              </div>
-          </Container>
+          <div className={`timeline-container`}>
+            {timelineData.map((data, idx) => (
+                <div key={idx} className="timeline-item">
+                  <div className={`timeline-item-content`} style={{border: '1.5px solid white'}}>
+                    <time>{data.date}</time>
+                    <p style={{fontWeight: '730', fontSize: '2.8vh', letterSpacing: '0.2vh'}}>{data.text}</p>
+                    <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
+                  </div>
+                </div>
+            ))}
+          </div>
         </HeroBody>
       </Hero>
       {

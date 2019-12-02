@@ -9,10 +9,10 @@ const About = () => {
     return(
         <Hero id="about" isColor={theme}>
             <HeroBody>
-                <div className="row m-0 has-text-centered-mobile">
+                <div className="row m-0 has-text-centered-mobile has-text-centered">
                     <div className="col-sm-4 pt-4">
                         <a href="https://amfoss.in">
-                            {theme === 'dark' ? <img alt="amFOSS" src={LightDesign} style={{width: '45vh'}}/>: <img alt="amFOSS" src={BlackDesign} style={{width: '45vh'}}/>}
+                            {theme === 'black' ? <img alt="amFOSS" src={LightDesign} style={{width: '50vh'}}/>: <img alt="amFOSS" src={BlackDesign} style={{width: '50vh'}}/>}
                         </a>
                     </div>
                     <div className="col-sm-8 pt-4">
