@@ -40,7 +40,7 @@ const Header = () => {
                           Want to be a mentor ?
                       </Link>
                   </NavbarItem>
-                  {url === 'http://localhost:8000/' ?
+                  {url === 'https://asoc.netlify.com/' ?
                     <>
                         <NavbarItem>
                             <div

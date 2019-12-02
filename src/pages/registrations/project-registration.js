@@ -87,9 +87,9 @@ const ProjectRegistration = props => {
                         register();
                         e.preventDefault();
                     }}>
-                    <SEO title="Project Registations" />
+                    <SEO title="Project Registation" />
                     <Hero isColor={theme} isSize="medium">
-                        <Title className="has-text-centered mt-2">Project Registrations</Title>
+                        <Title className="has-text-centered mt-2">Project Registration</Title>
                         <HeroBody>
                             <Container>
                                 <div className={`forms card`}>
@@ -97,6 +97,7 @@ const ProjectRegistration = props => {
                                     <div className="row m-0 px-4 pb-4">
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Name *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Full Name"
@@ -108,6 +109,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Phone *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Phone Number"
@@ -119,6 +121,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Email *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Email"
@@ -130,15 +133,18 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-sm-6 p-0">
                                             <div className="m-2">
-                                                <select className="form-control text-light" onChange={e => setGender(e.target.value)}>
+                                                <label>Gender *(required field)</label>
+                                                <select className="form-control text-dark" onChange={e => setGender(e.target.value)}>
                                                     <option value="" hidden disabled selected>Select Gender</option>
                                                     <option value="male">Male</option>
                                                     <option value="female">Female</option>
+                                                    <option value="other">Other</option>
                                                 </select>
                                             </div>
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Age *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Age"
@@ -150,7 +156,8 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-sm-6 p-0">
                                             <div className="m-2">
-                                                <select className="form-control text-light" onChange={e => setUniversity(e.target.value)}>
+                                                <label>University *(required field)</label>
+                                                <select className="form-control text-dark" onChange={e => setUniversity(e.target.value)}>
                                                     <option value="" hidden disabled selected>Select University/School</option>
                                                     <option value="university">University</option>
                                                     <option value="school">School</option>
@@ -159,6 +166,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Instution Name *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Institution Name"
@@ -170,9 +178,10 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Resume Link</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Enter Resume Link"
+                                                    placeholder="Enter Resume Link (Link to google drive)"
                                                     name="resume"
                                                     className="form-control"
                                                     onChange={e => setResume(e.target.value)}
@@ -181,6 +190,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>About *(required field)</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Enter about you"
@@ -197,6 +207,7 @@ const ProjectRegistration = props => {
                                     <div className="row m-0 px-4 pb-4">
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Project Name *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Project Name"
@@ -208,6 +219,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Repo Link *(required field)</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Code Repo Link"
@@ -219,6 +231,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>Repo Link *(required field)</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Describe your project"
@@ -230,9 +243,10 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Tech Stack *(required field)</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Enter Tech Stack Languages"
+                                                    placeholder="Enter Tech Stack"
                                                     name="techstack"
                                                     className="form-control"
                                                     onChange={e => setTechStack(e.target.value)}
@@ -241,9 +255,10 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
+                                                <label>Approximate Time *(required field)</label>
                                                 <input
                                                     type="text"
-                                                    placeholder="Enter Approximate Time Required (week-wise)"
+                                                    placeholder="Enter Approximate Time Required for the proposed projects by Milestones (Week-wise)"
                                                     name="time required"
                                                     className="form-control"
                                                     onChange={e => setTime(e.target.value)}
@@ -252,6 +267,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>Community *(required field)</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="Are there any current users?, Who would be the potential users of your project?, How is the project going to be useful for the community?"
@@ -263,6 +279,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>Impact in Users *(required field)</label>
                                                 <textarea
                                                     rows="5" cols="50"
                                                     placeholder="What are the current solutions available that solve the same problem?, How is your project different / better than the existing solutions?"
@@ -274,6 +291,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>Current state of the project *(required field)</label>
                                                 <textarea
                                                     placeholder="What is the current state of the project (implementation),
                                                      how much work is done?,
@@ -287,6 +305,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>Why should we select ? *(required field)</label>
                                                 <textarea
                                                     placeholder="Why should we select the project for this program?"
                                                     rows="5" cols="50"
@@ -298,6 +317,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-12 p-0">
                                             <div className="m-2">
+                                                <label>What do you expect from amFOSS? *(required field)</label>
                                                 <textarea
                                                     placeholder="What do you expect from amFOSS?"
                                                     rows="5" cols="50"
