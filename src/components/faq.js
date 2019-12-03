@@ -5,27 +5,27 @@ import {Container, Hero, HeroBody, Title} from "bloomer";
 const FAQData = [
     {
         question: 'Q: Why should I participate in amDeC?',
-        answer: 'amDeC is a place where you not only get to learn to apply your current skills but you get a bunch of new ones. Moreover the learning is not only limited to technical skills, amDeC will introduce you to a new standard about collaborating on a project. Not only that, amDeC is a platform which lets you build on your current skills and hone them. There is a project for all skill level at amDeC. Furthermore, you interact and share ideas with some great people. At the end of it, you’ve made some great friends from all over the world with whom you can discuss fun projects, get feedback on your code, and just about anything.',
+        answer: 'amDeC provides a platform for students to apply their skills on real world projects and learn along the way. You learn to collaborate effectively and write code according to preset standards.  Whether you already know how to code, or have no prior experience, amDeC is a perfect opportunity for you. There are projects for people with any kind of skill set here. You get to interact and share ideas with some great people. At the end of it, you will have made some great friends from all over the world with whom you can discuss fun projects, get feedback on your code, and just about anything.',
     },
     {
         question: 'Q: Who can participate in amDeC?',
         answer: 'Any school / university student is eligible to participate in amDeC.',
     },
     {
-        question: 'Q: Are there any age restrictions for amDeC?',
-        answer: 'There are no age restrictions but one should be enrolled in a school / university.',
+        question: 'Q: How do I participate in amDeC?',
+        answer: 'Students can participate by registering on the amDeC website.',
     },
     {
-        question: 'Q: Which programming languages do I need to be fluent in ?',
-        answer: 'amDeC offers various projects in a plethora of languages / frameworks. The choice of project / programming language rests with the student.',
+        question: 'Q: Do I have to know how to code in order to participate?',
+        answer: 'Having prior coding knowledge is beneficial but not necessary. You should just have the drive to keep learning new stuff as you progress.',
     },
     {
-        question: 'Q: On what basis will I be evaluated?',
-        answer: 'Student performance is judged on various parameters. A detailed list  of the judgement criteria will be announced later.'
+        question: 'Q: Is there a selection criteria for participation??',
+        answer: 'Students are selected on the basis of the final project proposal sent by them  before the deadline.'
     },
     {
-        question: 'Q: On what basis will I be evaluated?',
-        answer: 'Student performance is judged on various parameters. A detailed list  of the judgement criteria will be announced later.'
+        question: 'Q:  Will I get any gifts / rewards ?',
+        answer: 'Participants who clear all three evaluations get a e-certificate along with a T-shirt and some cool swag.'
     }
 ];
 
@@ -49,8 +49,8 @@ const FAQ = () => {
                 <Container>
                     <div className="row m-0 has-text-left">
                         {FAQData.map((faq, index) => (
-                            <div className={`faq col-md-6`} style={{cursor: 'pointer'}}>
-                                <div className={`p-3 m-2 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`} key={index} onClick={e => setIds(show, index)}>
+                            <div className={`faq col-md-6 col-sm-12`} style={{cursor: 'pointer'}}>
+                                <div className={`p-3 my-2 mx-1 card  has-background-${getOppositeTheme(theme)} has-text-${theme}`} key={index} onClick={e => setIds(show, index)}>
                                     <b>{faq.question}</b>
                                     {showId === index ? <p className="py-3 has-text-justified">{faq.answer}</p>:null}
                                 </div>

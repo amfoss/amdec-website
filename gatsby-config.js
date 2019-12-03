@@ -88,6 +88,16 @@ module.exports = {
         icon: `${__dirname}/src/images/amdec_global.png`
       }
     },
+    {
+      resolve: `gatsby-transformer-yaml-full`,
+      options: {
+        createChildNodes: true,
+        plugins: [
+          `gatsby-yaml-full-markdown`,
+          `gatsby-yaml-full-file`,
+        ],
+      },
+    },
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,

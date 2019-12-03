@@ -1,33 +1,40 @@
 const timelineData =  [
     {
-        text: 'Student/Mentor application opens',
-        date: 'December 01 2019',
+        text: 'Mentor application starts',
+        date: 'December 03, 2019, 20:30 IST',
     },
     {
-        text: 'Mentor application deadline',
-        date: 'December 13 2019',
+        text: 'Mentor application ends',
+        date: 'December 17, 2019, 23:59 IST',
     },
     {
-        text: 'Student application deadline',
-        date: 'December 15 2019',
+        text: 'Selected projects announced',
+        date: 'December 19, 2019, 20:30 IST',
     },{
-        text: 'Contest opens',
-        date: 'December 16 2019',
+        text: 'Student application starts',
+        date: 'December 19, 2019, 20:30 IST',
     },{
-        text: 'Mid evaluation',
-        date: 'December 28-30 2019',
+        text: 'Student application ends',
+        date: 'December 31, 2019, 23:59 IST',
     },{
-        text: 'Claim new task deadline',
-        date: 'January 18 2019',
+        text: 'Selected students announced',
+        date: 'January 03, 2020, 20:30 IST ',
     },{
-        text: 'Contest ends, Student work submission deadline',
-        date: 'January 20 2019',
+        text: 'Community bonding period',
+        date: 'January 03, 2020 - January 08, 2020',
     },{
-        text: 'Deadline for mentor to review work',
-        date: 'January 22 2019',
+        text: 'Coding period',
+        date: 'January 08, 2020 - February 23, 2020',
     },{
-        text: 'ASoC Winner Announcements',
-        date: 'January 30 2019',
+        text: 'Final submission',
+        date: 'February 25, 2020, 23:59 IST',
+    },
+    {
+        text: 'Winners announced',
+        date: 'February 28, 2020, 20:30 IST',
+    },{
+        text: 'Certificate and Goodies',
+        date: 'March 1st Week',
     }
 ];
 
