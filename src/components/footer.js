@@ -1,7 +1,8 @@
 import React, { useContext } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import {Button, Columns, Column, Container, Footer as BloomerFooter, Icon, Level, LevelItem, LevelLeft, LevelRight, Media, MediaContent} from 'bloomer';
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
+import { ThemeContext } from '../contexts/theme';
+import amFOSSLogo from '../images/logo_light.png';
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -23,7 +24,7 @@ const Footer = () => {
                             href="https://amfoss.in/"
                             className={`has-text-light`}
                           >
-                            amFOSS
+                            <img src={amFOSSLogo} className="p-1" alt="amFOSS Logo" style={{height: '6vh'}}/>
                           </a>
                         </strong>
                         <br />
@@ -101,7 +102,7 @@ const Footer = () => {
             </Level>
             <div className="row m-0">
               <div className="col-sm-4">
-              <p>
+              <p className="codeofconduct" >
                 <a href="https://drive.google.com/file/d/1yY5Gs2XUDVFk5quI0vkKhpQnS9Boqn7P/view" target="_blank" style={{color: 'white'}}>
                   Code of Conduct
                 </a>
