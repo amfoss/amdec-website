@@ -8,7 +8,8 @@ module.exports = {
       instagram: `amfoss.in`,
       linkedin: `amfoss`,
       twitter: `amfoss_in`,
-      github: `amfoss`
+      github: `amfoss`,
+      irc: `#amfoss-amdec`
     },
   },
   pathPrefix: `/`,

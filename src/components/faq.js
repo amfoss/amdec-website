@@ -1,6 +1,7 @@
 import React, {useContext, useState} from "react";
 import {getOppositeTheme, ThemeContext} from "../contexts/theme";
 import {Container, Hero, HeroBody, Title} from "bloomer";
+import {Link} from "gatsby";
 
 const FAQData = [
     {
@@ -58,11 +59,11 @@ const FAQ = () => {
                         ))}
                         <div className="col-md-4"/>
                         <div className="col-md-4">
-                            <a href="https://amfoss.in">
+                            <Link to="/faq">
                                 <div className={`py-3 m-2 card has-text-${getOppositeTheme(theme)}`} style={{backgroundColor: 'transparent', border: '2px solid white'}}>
                                     <b className="has-text-centered">Know more ?</b>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </Container>

@@ -6,7 +6,7 @@ import Layout from '../components/layout';
 import SEO from '../components/seo';
 import {ThemeContext} from "../contexts/theme";
 
-const NotFoundPage = props => {
+const Codeofconduct = props => {
     const { theme } = useContext(ThemeContext);
     const { data, location } = props;
     const siteTitle = data.site.siteMetadata.title;
@@ -71,7 +71,7 @@ const NotFoundPage = props => {
     );
 };
 
-export default NotFoundPage;
+export default Codeofconduct;
 
 export const pageQuery = graphql`
     query {

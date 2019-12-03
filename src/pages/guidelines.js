@@ -94,7 +94,7 @@ const NotFoundPage = props => {
 
         <h3 id=""> </h3>
 
-        <p>Students</p>
+        <b>Students</b>
 
         <ul className="pl-4">
             <li>Students will have 3 evaluations biweekly(once in two weeks), the 3rd evaluation will be the final evaluation.  </li>
@@ -111,7 +111,7 @@ const NotFoundPage = props => {
             </li>
         </ul>
 
-        <p>Mentors</p>
+        <b>Mentors</b>
 
         <ul className="pl-4">
             <li>Mentors will have to complete the 3 evaluations biweekly without fail. </li>

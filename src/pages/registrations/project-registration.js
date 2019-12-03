@@ -1,6 +1,7 @@
 import React, {useContext, useState} from 'react';
 import { graphql } from 'gatsby';
 import { Container, Hero, HeroBody, Title } from 'bloomer';
+import {Link} from "gatsby";
 import dataFetch from '../../utils/dataFetch';
 
 import Layout from '../../components/layout';
@@ -88,8 +89,8 @@ const ProjectRegistration = props => {
                     }}>
                     <SEO title="Project Registation" />
                     <Hero isColor={theme} isSize="medium">
-                        <Title className="has-text-centered p-2 mt-4">Project Registration</Title>
                             <Container>
+                                <Title className="has-text-centered p-2 mt-4">Project Registration</Title>
                                 <div className={`forms card`}>
                                     <Title className={`has-text-dark p-4`}>Mentor Info</Title>
                                     <div className="row m-0 px-4 pb-4">
@@ -328,7 +329,7 @@ const ProjectRegistration = props => {
                                         <div className="col-md-12 form-check">
                                             <div className="m-2 text-dark text-center d-flex justify-content-center">
                                                 <label className="form-check-label text-dark" htmlFor="undertaking">
-                                                    By submitting this application, I agree to the <a href="#" className="text-dark">Code of Conduct</a> & <a href="#" className="text-dark">Privacy Policy</a> of the organizers.
+                                                    By submitting this application, I agree to the <Link to="/codeofconduct" className="text-dark">Code of Conduct</Link> of the organizers.
                                                 </label>
                                             </div>
                                         </div>

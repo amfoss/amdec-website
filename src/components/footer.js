@@ -29,7 +29,9 @@ const Footer = () => {
                           </a>
                         </strong>
                         <br/>
-                      <span className="has-text-centered">A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.</span>
+                      <span className="has-text-centered">
+                        A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.
+                      </span>
                       </p>
                     </MediaContent>
                   </Media>
@@ -38,6 +40,16 @@ const Footer = () => {
               <LevelRight className="is-inline-flex-mobile">
                 <LevelItem>
                   <Columns isMobile>
+                    <Column>
+                      <Button
+                          href="mailto:amritapurifoss@gmail.com"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="gmail"
+                      >
+                        <img src="https://img.icons8.com/color/48/000000/gmail.png" alt="gmail icon"/>
+                      </Button>
+                    </Column>
                     <Column>
                       <Button
                         isInverted={theme === 'light'}
@@ -83,20 +95,30 @@ const Footer = () => {
                         <Icon className="fab fa-linkedin fa-lg" />
                       </Button>
                     </Column>
-                      <Column>
-                          <Button
-                              isInverted={theme === 'light'}
-                              isColor="light"
-                              href={`https://github.com/${
-                                  data.site.siteMetadata.social.github
-                              }`}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              title="Github"
-                          >
-                              <Icon className="fab fa-github fa-lg" />
-                          </Button>
-                      </Column>
+                    <Column>
+                        <Button
+                            href={`https://github.com/${
+                                data.site.siteMetadata.social.github
+                            }`}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            title="Github"
+                        >
+                            <Icon className="fab fa-github fa-lg" />
+                        </Button>
+                    </Column>
+                    <Column>
+                      <Button
+                          href={`https://webchat.freenode.net/${
+                              data.site.siteMetadata.social.irc
+                          }`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          title="IRC"
+                      >
+                        <Icon className="fa fa-comments fa-lg" />
+                      </Button>
+                    </Column>
                   </Columns>
                 </LevelItem>
               </LevelRight>
@@ -109,10 +131,8 @@ const Footer = () => {
                 </Link>
               </p>
               </div>
-              <div className="col-sm-4">
-                <div className="has-text-centered" style={{marginTop: '10px'}}>(C) 2019 amFOSS. All Rights Reserved</div>
-              </div>
             </div>
+            <div className="has-text-centered" style={{marginTop: '10px'}}>(C) 2019 amFOSS. All Rights Reserved</div>
           </Container>
         </BloomerFooter>
       )}
@@ -129,6 +149,7 @@ const footerQuery = graphql`
           linkedin
           twitter
           github
+          irc
         }
       }
     }
