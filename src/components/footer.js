@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { StaticQuery, graphql } from 'gatsby';
 import {Button, Columns, Column, Container, Footer as BloomerFooter, Icon, Level, LevelItem, LevelLeft, LevelRight, Media, MediaContent} from 'bloomer';
 import { ThemeContext } from '../contexts/theme';
+import {Link} from "gatsby";
 import amFOSSLogo from '../images/logo_light.png';
 
 const Footer = () => {
@@ -27,8 +28,8 @@ const Footer = () => {
                             <img src={amFOSSLogo} className="p-1" alt="amFOSS Logo" style={{height: '6vh'}}/>
                           </a>
                         </strong>
-                        <br />
-                          A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.
+                        <br/>
+                      <span className="has-text-centered">A student-run community with over 50+ members from Amrita Vishwa Vidyapeetham, Amritapuri.</span>
                       </p>
                     </MediaContent>
                   </Media>
@@ -100,12 +101,12 @@ const Footer = () => {
                 </LevelItem>
               </LevelRight>
             </Level>
-            <div className="row m-0">
+            <div className="row">
               <div className="col-sm-4">
               <p className="codeofconduct" >
-                <a href="https://drive.google.com/file/d/1yY5Gs2XUDVFk5quI0vkKhpQnS9Boqn7P/view" target="_blank" style={{color: 'white'}}>
+                <Link to="/codeofconduct" style={{color: 'white'}}>
                   Code of Conduct
-                </a>
+                </Link>
               </p>
               </div>
               <div className="col-sm-4">

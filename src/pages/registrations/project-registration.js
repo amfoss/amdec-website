@@ -88,8 +88,7 @@ const ProjectRegistration = props => {
                     }}>
                     <SEO title="Project Registation" />
                     <Hero isColor={theme} isSize="medium">
-                        <HeroBody>
-                            <Title className="has-text-centered">Project Registration</Title>
+                        <Title className="has-text-centered p-2 mt-4">Project Registration</Title>
                             <Container>
                                 <div className={`forms card`}>
                                     <Title className={`has-text-dark p-4`}>Mentor Info</Title>
@@ -354,7 +353,6 @@ const ProjectRegistration = props => {
                                     </div>
                                 </div>
                             </Container>
-                        </HeroBody>
                     </Hero>
                 </form> : successText !== '' ? (<div className="alert alert-success">
                         Thank You! You have successfully signed up for the event.

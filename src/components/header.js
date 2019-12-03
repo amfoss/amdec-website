@@ -33,13 +33,21 @@ const Header = () => {
               <NavbarEnd>
                   <NavbarItem>
                       <Link
+                          to="/guidelines"
+                          className={`navbar-item has-text-light`}
+                      >
+                          Guidelines
+                      </Link>
+                  </NavbarItem>
+                  <NavbarItem>
+                      <Link
                           to="/registrations/project-registration"
                           className={`navbar-item has-text-light`}
                       >
                           Want to be a mentor ?
                       </Link>
                   </NavbarItem>
-                  {url === 'https://asoc.netlify.com/' ?
+                  {url === 'http://localhost:8000/' ?
                     <>
                         <NavbarItem>
                             <div
@@ -70,27 +78,6 @@ const Header = () => {
                         </NavbarItem>
                     </>
                   :null}
-                  {/*<NavbarItem>*/}
-                  {/*    <div*/}
-                  {/*        style={{cursor: 'pointer'}}*/}
-                  {/*        onClick={()=> scrollTo('#projects')}*/}
-                  {/*        className={`navbar-item has-text-${getOppositeTheme(theme)}`}*/}
-                  {/*    >*/}
-                  {/*        Projects*/}
-                  {/*    </div>*/}
-                  {/*</NavbarItem>*/}
-                  <NavbarItem>
-                      <Button
-                          isColor="black"
-                          onClick={toggleTheme}
-                          title="Toggle Dark Theme"
-                      >
-                          <Icon
-                              className="fas fa-moon"
-                              hasTextColor={theme === 'light' ? 'light' : 'warning'}
-                          />
-                      </Button>
-                  </NavbarItem>
               </NavbarEnd>
           </NavbarMenu>
       </Navbar>
