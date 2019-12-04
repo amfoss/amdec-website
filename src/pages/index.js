@@ -25,6 +25,7 @@ import About from "../components/about";
 import Why from "../components/Why";
 import FAQ from "../components/faq";
 import HttpsRedirect from 'react-https-redirect';
+import Contact from "./contact";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -227,6 +228,7 @@ const ProjectsIndex = props => {
             : null
           }
           <FAQ/>
+          <Contact/>
         </Layout>
       </HttpsRedirect>
   );
