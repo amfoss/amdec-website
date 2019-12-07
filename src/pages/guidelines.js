@@ -89,14 +89,74 @@ const NotFoundPage = props => {
 
             <li>Submit a Project Proposal. </li>
         </ol>
+                    <h3 id="mentors">Mentors</h3>
 
-        <h2 id="evaluationcriteria">Evaluation Criteria</h2>
+                    <h3 id="role">Role</h3>
+
+                    <ol>
+                        <li>Mentors must be designated by the primary mentor of the project. By default, we will consider the person who submits the project as the primary mentor. </li>
+
+                        <li>Mentors must accept the terms of the Mentor Participant Agreement. </li>
+                    </ol>
+
+                    <h3 id="eligibility">Eligibility</h3>
+
+                    <p>Requirements to participate in the Program, a Mentor must upon registration for the Program, be either:</p>
+
+                    <ol>
+                        <li>Be a contributor to an active and viable open source project. </li>
+
+                        <li>Not be a Student in the Program. </li>
+                    </ol>
+
+                    <h3 id="responsibilities">Responsibilities</h3>
+
+                    <p>Each Mentor accepted will:</p>
+                    <ol>
+                        <li>Participate in the Community Bonding period. </li>
+
+                        <li>Provide guidance to his or her Student(s) on their projects:
+
+                            <ul>
+                                <li>Use best efforts to respond to Student requests within Twenty-four(24) hours. </li>
+
+                                <li>Provide Evaluations of his or her student(s)’ work as described below in accordance with the community project evaluation criteria. </li>
+
+                                <li>Review the “Roles and Responsibilities” document published on the program Website and be sure they are meeting the responsibilities outlined therein. </li></ul></li>
+
+                        <li>Before program
+
+                            <ul>
+                                <li>Accent the invitation in the email sent by amFOSS to become an official mentor. </li>
+
+                                <li>Talk to interested candidates. Share with them project details, goals and some ideas for implementation. </li>
+
+                                <li>Point them to self-contained, easy and newcomer-friendly bugs to fix. </li>
+
+                                <li>Allow all Potential candidates to submit Proposals for the project until the official deadline. </li>
+
+                                <li>Review Prposals and give feedback. </li>
+
+                                <li>Inform program administrator about your decision. </li></ul></li>
+
+                        <li>During program
+
+                            <ul>
+                                <li>Set development and communication lans with your mentee. </li>
+
+                                <li>Encourage them to articulate in the community bonding period following our guidelines. </li>
+
+                                <li>Set aside time in your schedule for a weekly meeting with your mentee via video call.</li></ul>
+
+                        </li>
+                    </ol>
+                    <h2 id="evaluationcriteria">Evaluation Criteria</h2>
 
         <h3 id=""> </h3>
 
         <b>Students</b>
 
-        <ul className="pl-4">
+        <ol className="pl-4">
             <li>Students will have 3 evaluations biweekly(once in two weeks), the 3rd evaluation will be the final evaluation.  </li>
 
             <li>Each evaluation requires the student to submit a blog post that covers the following:
@@ -109,7 +169,7 @@ const NotFoundPage = props => {
 
                     <li>Work planned for the next evaluation phase </li></ul>
             </li>
-        </ul>
+        </ol>
 
         <b>Mentors</b>
 
@@ -127,7 +187,31 @@ const NotFoundPage = props => {
                     <li>Regularity in contributing to the project</li></ul>
             </li>
         </ul>
+        <h2>Privacy Policy</h2>
+                    <ul>
+                        <li>amFOSS will process the personal information provided during registration and in any
+                            subsequent communications to administer the program (including verifying eligibility to
+                            participate in the program, running the program, sending notifications regarding the
+                            program, and delivering promotional items).
+                        </li>
+                        <li>
+                            The display name that participants create during registration will be displayed publicly on
+                            the program website and any archives of the program website, and will be shared with
+                            project mentors for the purpose of communicating with the students to answer their
+                            questions and reviewing their proposals and work.
 
+                        </li>
+                        <li>
+                            Student’s project submissions and contact information (email address and display name)
+                            will be shared with the Program Administrator and Mentors to administer the program.
+
+                        </li>
+                        <li>
+                            Participants can access, update, remove and restrict the processing of their personal
+                            information in their program profile till coding period.
+
+                        </li>
+                    </ul>
         <h2>Licensing</h2>
 
         <p>All projects submitted to amDeC are licensed under <a href="https://choosealicense.com/licenses/gpl-3.0/">GNU GPLv3</a> license.</p>
