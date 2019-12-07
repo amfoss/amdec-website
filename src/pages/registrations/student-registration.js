@@ -84,7 +84,7 @@ const ProjectRegistration = props => {
                         e.preventDefault();
                     }}>
                     <SEO title="Project Registation" />
-                    <Hero isColor={theme} isSize="medium">
+                    <Hero isColor={theme} isFullHeight isSize="medium">
                         <Container>
                             <Title className="has-text-centered p-2 mt-4">Student Registration</Title>
                             <div className={`forms card`}>
