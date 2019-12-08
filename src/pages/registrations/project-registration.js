@@ -165,7 +165,7 @@ const ProjectRegistration = props => {
                                         </div>
                                         <div className="col-md-6 p-0">
                                             <div className="m-2">
-                                                <label>Instution Name *</label>
+                                                <label>Institution Name *</label>
                                                 <input
                                                     type="text"
                                                     placeholder="Enter Institution Name"

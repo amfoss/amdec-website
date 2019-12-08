@@ -127,7 +127,7 @@ const NotFoundPage = props => {
                         <li>Before program
 
                             <ul>
-                                <li>Accent the invitation in the email sent by amFOSS to become an official mentor. </li>
+                                <li>Accept the invitation in the email sent by amFOSS to become an official mentor. </li>
 
                                 <li>Talk to interested candidates. Share with them project details, goals and some ideas for implementation. </li>
 
@@ -135,7 +135,7 @@ const NotFoundPage = props => {
 
                                 <li>Allow all Potential candidates to submit Proposals for the project until the official deadline. </li>
 
-                                <li>Review Prposals and give feedback. </li>
+                                <li>Review Proposals and give feedback. </li>
 
                                 <li>Inform program administrator about your decision. </li></ul></li>
 
