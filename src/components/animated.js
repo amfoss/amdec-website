@@ -1,6 +1,6 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { useSpring, animated } from 'react-spring';
+import React from "react";
+import PropTypes from "prop-types";
+import { useSpring, animated } from "react-spring";
 
 const Animated = props => {
   const [spring, setSpring] = useSpring(() => ({
@@ -20,9 +20,7 @@ const Animated = props => {
   };
 
   const trans = (x, y, s) =>
-    `perspective(${
-      props.perspective
-    }) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
+    `perspective(${props.perspective}) rotateX(${x}deg) rotateY(${y}deg) scale(${s})`;
 
   const _updateSpring = (x, y, element) =>
     setSpring({ xys: calc(x, y, element) });
@@ -49,7 +47,7 @@ const Animated = props => {
 
 Animated.defaultProps = {
   dampingFactor: 20,
-  perspective: '1200px',
+  perspective: "1200px",
   scaleFactor: 1.04
 };
 

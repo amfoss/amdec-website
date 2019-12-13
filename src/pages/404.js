@@ -1,10 +1,10 @@
-import React, {useContext} from 'react';
-import { graphql } from 'gatsby';
-import { Container, Hero, HeroBody, Subtitle, Title } from 'bloomer';
+import React, { useContext } from "react";
+import { graphql } from "gatsby";
+import { Container, Hero, HeroBody, Subtitle, Title } from "bloomer";
 
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import {ThemeContext} from "../contexts/theme";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import { ThemeContext } from "../contexts/theme";
 
 const NotFoundPage = props => {
   const { theme } = useContext(ThemeContext);

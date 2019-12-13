@@ -1,6 +1,6 @@
-import React, {useContext} from 'react';
-import { Link, graphql } from 'gatsby';
-import LazyImage from 'gatsby-image';
+import React, { useContext } from "react";
+import { Link, graphql } from "gatsby";
+import LazyImage from "gatsby-image";
 import {
   Card,
   CardContent,
@@ -11,20 +11,20 @@ import {
   Hero,
   HeroBody,
   Title,
-  Subtitle,
-} from 'bloomer';
-import Fade from 'react-reveal/Fade';
-import Layout from '../components/layout';
-import SEO from '../components/seo';
-import Animated from '../components/animated';
-import { ThemeContext, getOppositeTheme } from '../contexts/theme';
-import amDeCBanLight from '../images/amdec_banner.png';
+  Subtitle
+} from "bloomer";
+import Fade from "react-reveal/Fade";
+import Layout from "../components/layout";
+import SEO from "../components/seo";
+import Animated from "../components/animated";
+import { ThemeContext, getOppositeTheme } from "../contexts/theme";
+import amDeCBanLight from "../images/amdec_banner.png";
 import timelineData from "../components/Data";
-import Particles from "react-particles-js"
+import Particles from "react-particles-js";
 import About from "../components/about";
 import Why from "../components/Why";
 import FAQ from "../components/faq";
-import HttpsRedirect from 'react-https-redirect';
+import HttpsRedirect from "react-https-redirect";
 import Contact from "./contact";
 
 const ProjectsIndex = props => {
@@ -34,203 +34,222 @@ const ProjectsIndex = props => {
   const projects = data.allMarkdownRemark.edges;
 
   return (
-      <HttpsRedirect>
-        <Layout location={location}>
-          <SEO title={siteTitle} />
-          <Hero isColor='black' className="is-fullheight-with-navbar">
-            <Particles
-                style={{position: 'absolute'}}
-                canvasClassName="particleBg"
-                params={{
-                  "particles": {
-                    "number": {
-                      "value": 50,
-                      "density": {
-                        "enable": true,
-                        "value_area": 700
-                      }
-                    },
-                    "color": {
-                      "value": "#ffffff"
-                    },
-                    "shape": {
-                      "type": "circle",
-                      "stroke": {
-                        "width": 1,
-                        "color": "#ffffff"
-                      },
-                      "polygon": {
-                        "nb_sides": 5
-                      },
-                      "image": {
-                        "src": "",
-                        "width": 100,
-                        "height": 100
-                      }
-                    },
-                    "opacity": {
-                      "value": 0.7,
-                      "random": true
-                    },
-                    "size": {
-                      "value": 10,
-                      "random": true
-                    },
-                    "line_linked": {
-                      "enable": true,
-                      "distance": 200,
-                      "color": "#ffffff",
-                      "opacity": 0.5,
-                      "width": 2
-                    },
-                    "move": {
-                      "enable": true,
-                      "speed": 2,
-                      "direction": "top",
-                      "random": true,
-                      "straight": false,
-                      "out_mode": "out",
-                      "bounce": false,
-                      "attract": {
-                        "enable": true,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                      }
+    <HttpsRedirect>
+      <Layout location={location}>
+        <SEO title={siteTitle} />
+        <Hero isColor="black" className="is-fullheight-with-navbar">
+          <Particles
+            style={{ position: "absolute" }}
+            canvasClassName="particleBg"
+            params={{
+              particles: {
+                number: {
+                  value: 50,
+                  density: {
+                    enable: true,
+                    value_area: 700
+                  }
+                },
+                color: {
+                  value: "#ffffff"
+                },
+                shape: {
+                  type: "circle",
+                  stroke: {
+                    width: 1,
+                    color: "#ffffff"
+                  },
+                  polygon: {
+                    nb_sides: 5
+                  },
+                  image: {
+                    src: "",
+                    width: 100,
+                    height: 100
+                  }
+                },
+                opacity: {
+                  value: 0.7,
+                  random: true
+                },
+                size: {
+                  value: 10,
+                  random: true
+                },
+                line_linked: {
+                  enable: true,
+                  distance: 200,
+                  color: "#ffffff",
+                  opacity: 0.5,
+                  width: 2
+                },
+                move: {
+                  enable: true,
+                  speed: 2,
+                  direction: "top",
+                  random: true,
+                  straight: false,
+                  out_mode: "out",
+                  bounce: false,
+                  attract: {
+                    enable: true,
+                    rotateX: 600,
+                    rotateY: 1200
+                  }
+                }
+              },
+              interactivity: {
+                detect_on: "canvas",
+                events: {
+                  onhover: {
+                    enable: false,
+                    mode: "repulse"
+                  },
+                  onclick: {
+                    enable: false,
+                    mode: "push"
+                  },
+                  resize: true
+                },
+                modes: {
+                  grab: {
+                    distance: 800,
+                    line_linked: {
+                      opacity: 1
                     }
                   },
-                  "interactivity": {
-                    "detect_on": "canvas",
-                    "events": {
-                      "onhover": {
-                        "enable": false,
-                        "mode": "repulse"
-                      },
-                      "onclick": {
-                        "enable": false,
-                        "mode": "push"
-                      },
-                      "resize": true
-                    },
-                    "modes": {
-                      "grab": {
-                        "distance": 800,
-                        "line_linked": {
-                          "opacity": 1
-                        }
-                      },
-                      "bubble": {
-                        "distance": 800,
-                        "size": 80,
-                        "duration": 2,
-                        "opacity": 0.8,
-                        "speed": 3
-                      },
-                      "repulse": {
-                        "distance": 400,
-                        "duration": 0.4
-                      },
-                      "push": {
-                        "particles_nb": 4
-                      },
-                      "remove": {
-                        "particles_nb": 2
-                      }
-                    }
+                  bubble: {
+                    distance: 800,
+                    size: 80,
+                    duration: 2,
+                    opacity: 0.8,
+                    speed: 3
                   },
-                  "retina_detect": true
+                  repulse: {
+                    distance: 400,
+                    duration: 0.4
+                  },
+                  push: {
+                    particles_nb: 4
+                  },
+                  remove: {
+                    particles_nb: 2
+                  }
                 }
-                }
-            />
-            <HeroBody>
-              <Container>
-                <div className="row m-0">
-                  <div className="col-md-6">
-                    <img src={amDeCBanLight} alt="amDeC" />
-                  </div>
-                  <div className="col-md-6">
-
+              },
+              retina_detect: true
+            }}
+          />
+          <HeroBody>
+            <Container>
+              <div className="row m-0">
+                <div className="col-md-6">
+                  <img src={amDeCBanLight} alt="amDeC" />
+                </div>
+                <div className="col-md-6"></div>
+              </div>
+            </Container>
+          </HeroBody>
+        </Hero>
+        <About />
+        <Why />
+        <Hero id="timeline" isColor={theme}>
+          <Title className="has-text-centered" style={{ fontWeight: "900" }}>
+            Timeline
+          </Title>
+          <HeroBody>
+            <div className={`timeline-container`}>
+              {timelineData.map((data, idx) => (
+                <div key={idx} className="timeline-item">
+                  <div
+                    className={`timeline-item-content`}
+                    style={{ border: "1.5px solid white" }}
+                  >
+                    <time>{data.date}</time>
+                    <p
+                      style={{
+                        fontWeight: "730",
+                        fontSize: "2.8vh",
+                        letterSpacing: "0.2vh"
+                      }}
+                    >
+                      {data.text}
+                    </p>
+                    <span
+                      className={`circle has-text-centered has-background-${theme}`}
+                      dangerouslySetInnerHTML={{ __html: data.img }}
+                    />
                   </div>
                 </div>
+              ))}
+            </div>
+          </HeroBody>
+        </Hero>
+        {projects.length > 0 ? (
+          <Hero id="projects" isColor={theme}>
+            <HeroBody>
+              <Title
+                className="has-text-centered"
+                style={{ fontWeight: "900" }}
+              >
+                Projects
+              </Title>
+              <Container>
+                <Fade>
+                  <Columns isMultiline>
+                    {projects.map(({ node }) => {
+                      const title = node.frontmatter.title || node.fields.slug;
+                      return (
+                        <Column
+                          isSize={{
+                            fullhd: 4,
+                            desktop: 4,
+                            tablet: 6
+                          }}
+                          key={node.fields.slug}
+                        >
+                          <Animated className="animated-card">
+                            <Link to={node.fields.slug}>
+                              <Card
+                                className={`is-project has-background-${theme}`}
+                                hasTextColor={theme}
+                              >
+                                {node.frontmatter.cover && (
+                                  <CardImage>
+                                    <LazyImage
+                                      fluid={
+                                        node.frontmatter.cover.childImageSharp
+                                          .fluid
+                                      }
+                                      alt={title}
+                                      className="image"
+                                    />
+                                  </CardImage>
+                                )}
+                                <CardContent>
+                                  <Title>{title}</Title>
+                                  <Subtitle
+                                    hasTextColor={getOppositeTheme(theme)}
+                                  >
+                                    <small>{node.frontmatter.topic}</small>
+                                  </Subtitle>
+                                </CardContent>
+                              </Card>
+                            </Link>
+                          </Animated>
+                        </Column>
+                      );
+                    })}
+                  </Columns>
+                </Fade>
               </Container>
             </HeroBody>
           </Hero>
-          <About/>
-          <Why/>
-          <Hero id="timeline" isColor={theme}>
-            <Title className="has-text-centered" style={{fontWeight: '900'}}>Timeline</Title>
-            <HeroBody>
-              <div className={`timeline-container`}>
-                {timelineData.map((data, idx) => (
-                    <div key={idx} className="timeline-item">
-                      <div className={`timeline-item-content`} style={{border: '1.5px solid white'}}>
-                        <time>{data.date}</time>
-                        <p style={{fontWeight: '730', fontSize: '2.8vh', letterSpacing: '0.2vh'}}>{data.text}</p>
-                        <span className={`circle has-text-centered has-background-${theme}`} dangerouslySetInnerHTML={{__html: data.img}}/>
-                      </div>
-                    </div>
-                ))}
-              </div>
-            </HeroBody>
-          </Hero>
-          {
-            projects.length > 0 ?
-                <Hero id="projects" isColor={theme}>
-                  <HeroBody>
-                    <Title className="has-text-centered" style={{fontWeight: '900'}}>Projects</Title>
-                    <Container>
-                      <Fade>
-                        <Columns isMultiline>
-                          {projects.map(({ node }) => {
-                            const title = node.frontmatter.title || node.fields.slug;
-                            return (
-                                <Column
-                                    isSize={{
-                                      fullhd: 4,
-                                      desktop: 4,
-                                      tablet: 6
-                                    }}
-                                    key={node.fields.slug}
-                                >
-                                  <Animated className="animated-card">
-                                    <Link to={node.fields.slug}>
-                                      <Card
-                                          className={`is-project has-background-${theme}`}
-                                          hasTextColor={theme}
-                                      >
-                                        {node.frontmatter.cover && (
-                                            <CardImage>
-                                              <LazyImage
-                                                  fluid={
-                                                    node.frontmatter.cover.childImageSharp.fluid
-                                                  }
-                                                  alt={title}
-                                                  className="image"
-                                              />
-                                            </CardImage>
-                                        )}
-                                        <CardContent>
-                                          <Title>{title}</Title>
-                                          <Subtitle hasTextColor={getOppositeTheme(theme)}>
-                                            <small>{node.frontmatter.topic}</small>
-                                          </Subtitle>
-                                        </CardContent>
-                                      </Card>
-                                    </Link>
-                                  </Animated>
-                                </Column>
-                            );
-                          })}
-                        </Columns>
-                      </Fade>
-                    </Container>
-                  </HeroBody>
-                </Hero>
-            : null
-          }
-          <FAQ/>
-          <Contact/>
-        </Layout>
-      </HttpsRedirect>
+        ) : null}
+        <FAQ />
+        <Contact />
+      </Layout>
+    </HttpsRedirect>
   );
 };
 
