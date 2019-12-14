@@ -40,15 +40,16 @@ const ProjectRegistration = props => {
     const otherInfo = Object.keys(inputs).filter(
       el => !primaryData.includes(el)
     );
+    console.log(inputs);
     const userInfo = {
-      name,
-      email,
-      phone,
+      name: inputs.name,
+      email: inputs.email,
+      phone: inputs.phone,
       formData: JSON.stringify(otherInfo)
     };
     const { data, errors } = await submitForm(userInfo);
 
-    if (Object.prototype.hasOwnProperty.call(r, "errors")) {
+    if (Object.prototype.hasOwnProperty.call(data, "errors")) {
       setErrorText(errors[0].message);
     } else {
       setSuccessText(data.id);
@@ -93,7 +94,7 @@ const ProjectRegistration = props => {
                       <label>Phone *</label>
                       <input
                         type="tel"
-                        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                        pattern="[0-9]{10}"
                         placeholder="Enter Phone Number"
                         name="phone"
                         className="form-control"
@@ -382,7 +383,7 @@ const ProjectRegistration = props => {
           </Hero>
         </form>
       ) : successText !== "" ? (
-        <div className="alert alert-success">
+        <div className="alert alert-success m-2">
           Thank You! You have successfully signed up for the event. We will get
           back to soon, meanwhile dont forget to bring your friends as well!
         </div>
