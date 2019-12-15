@@ -2,111 +2,30 @@ import React, { useContext, useState } from "react";
 import { graphql } from "gatsby";
 import { Container, Hero, HeroBody, Title } from "bloomer";
 import { Link } from "gatsby";
-import dataFetch from "../../utils/dataFetch";
+import { register, submitForm } from "../../helpers/formSubmission";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
 import { ThemeContext } from "../../contexts/theme";
+import useSubmitForm from "../../hooks/submit-form";
 
 const ProjectRegistration = props => {
   const { theme } = useContext(ThemeContext);
   const { data, location } = props;
   const siteTitle = data.site.siteMetadata.title;
-  const [name, setName] = useState("");
-  const [age, setAge] = useState(0);
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [gender, setGender] = useState("");
-  const [university, setUniversity] = useState("");
-  // const [community, setCommunity] = useState("");
-  const [institution, setInstitution] = useState("");
-  const [time, setTime] = useState(0);
-  const [impact, setImpact] = useState("");
-  const [about, setAbout] = useState("");
-  const [githubusername, setGitHubusername] = useState("");
-  const [project, setProject] = useState("");
   const [errorText, setErrorText] = useState("");
   const [successText, setSuccessText] = useState("");
-  const [currentState, setCurrentState] = useState("");
-  const [expectation, setExpectations] = useState("");
   const [loading, setLoading] = useState(false);
 
-  const query = `
-      mutation submitApplication($name: String!, $email: String!, $phone: String!, $formData: JSONString!){
-      submitApplication(
-        name: $name,
-        email: $email,
-        phone: $phone,
-        formID: 5,
-        formData: $formData
-      )
-      {
-        id
-      }
-    }
-`;
-  const submitForm = async variables => dataFetch({ query, variables });
-
-  const register = () => {
-    const emailRegex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-    const phoneRegex = /^\d{10}$/;
-    if (
-      name === "" ||
-      phone === "" ||
-      email === "" ||
-      gender === "" ||
-      age === "" ||
-      university === "" ||
-      githubusername === "" ||
-      institution === "" ||
-      time === "" ||
-      impact === "" ||
-      about === "" ||
-      project === "" ||
-      description === "" ||
-      currentState === "" ||
-      expectation === ""
-    ) {
-      setLoading(false);
-      setErrorText("Please Fill All the Fields");
-    } else if (emailRegex.test(email) === false) {
-      setLoading(false);
-      setErrorText("Enter Proper Email");
-    } else if (phoneRegex.test(phone) === false) {
-      setLoading(false);
-      setErrorText("Enter Proper Phone No");
-    } else {
-      const json = {
-        gender,
-        age,
-        university,
-        time,
-        impact,
-        about,
-        expectation,
-        description,
-        githubusername,
-        currentState
-      };
-      const variables = { name, email, phone, formData: JSON.stringify(json) };
-      submitForm(variables).then(r => {
-        if (Object.prototype.hasOwnProperty.call(r, "errors")) {
-          setErrorText(r.errors[0].message);
-        } else {
-          setSuccessText(r.data.id);
-          setErrorText("");
-        }
-      });
-    }
-  };
+  const { handleInputChange, inputs } = useSubmitForm();
 
   return (
     <Layout location={location} title={siteTitle}>
       {!loading ? (
         <form
-          onSubmit={e => {
+          onSubmit={async e => {
             setLoading(true);
-            register();
+            await register(inputs, setErrorText, setSuccessText);
             e.preventDefault();
           }}
         >
@@ -127,7 +46,8 @@ const ProjectRegistration = props => {
                         placeholder="Enter Full Name"
                         name="name"
                         className="form-control"
-                        onChange={e => setName(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -137,9 +57,10 @@ const ProjectRegistration = props => {
                       <input
                         type="text"
                         placeholder="Enter GitHub UserName"
-                        name="name"
+                        name="githubusername"
                         className="form-control"
-                        onChange={e => setGitHubusername(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -148,11 +69,13 @@ const ProjectRegistration = props => {
                     <div className="m-2">
                       <label>Phone *</label>
                       <input
-                        type="text"
+                        type="tel"
+                        pattern="[0-9]{10}"
                         placeholder="Enter Phone Number"
                         name="phone"
                         className="form-control"
-                        onChange={e => setPhone(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -160,11 +83,12 @@ const ProjectRegistration = props => {
                     <div className="m-2">
                       <label>Email *</label>
                       <input
-                        type="text"
+                        type="email"
                         placeholder="Enter Email"
                         name="email"
                         className="form-control"
-                        onChange={e => setEmail(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -173,7 +97,9 @@ const ProjectRegistration = props => {
                       <label>Gender *</label>
                       <select
                         className="form-control text-dark"
-                        onChange={e => setGender(e.target.value)}
+                        name="gender"
+                        onChange={handleInputChange}
+                        required
                       >
                         <option value="" hidden disabled selected>
                           Select Gender
@@ -189,7 +115,9 @@ const ProjectRegistration = props => {
                       <label>Project *</label>
                       <select
                         className="form-control text-dark"
-                        onChange={e => setProject(e.target.value)}
+                        name="project"
+                        onChange={handleInputChange}
+                        required
                       >
                         <option value="" hidden disabled selected>
                           Select Project
@@ -204,11 +132,12 @@ const ProjectRegistration = props => {
                     <div className="m-2">
                       <label>Age *</label>
                       <input
-                        type="text"
+                        type="number"
                         placeholder="Enter Age"
                         name="age"
                         className="form-control"
-                        onChange={e => setAge(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -217,7 +146,9 @@ const ProjectRegistration = props => {
                       <label>University *</label>
                       <select
                         className="form-control text-dark"
-                        onChange={e => setUniversity(e.target.value)}
+                        name="university"
+                        onChange={handleInputChange}
+                        required
                       >
                         <option value="" hidden disabled selected>
                           Select University/School
@@ -234,9 +165,10 @@ const ProjectRegistration = props => {
                         rows="5"
                         cols="50"
                         placeholder="What do you expect from amfoss"
-                        name="expecting"
+                        name="expectation"
                         className="form-control"
-                        onChange={e => setExpectations(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>
@@ -249,7 +181,8 @@ const ProjectRegistration = props => {
                         placeholder="Enter about you"
                         name="about"
                         className="form-control"
-                        onChange={e => setAbout(e.target.value)}
+                        onChange={handleInputChange}
+                        required
                       />
                     </div>
                   </div>

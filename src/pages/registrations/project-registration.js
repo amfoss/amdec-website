@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { graphql } from "gatsby";
 import { Container, Hero, HeroBody, Title } from "bloomer";
 import { Link } from "gatsby";
-import dataFetch from "../../utils/dataFetch";
+import { register, submitForm } from "../../helpers/formSubmission";
 
 import Layout from "../../components/layout";
 import SEO from "../../components/seo";
@@ -19,51 +19,13 @@ const ProjectRegistration = props => {
 
   const { handleInputChange, inputs } = useSubmitForm();
 
-  const query = `
-      mutation submitApplication($name: String!, $email: String!, $phone: String!, $formData: JSONString!){
-      submitApplication(
-        name: $name,
-        email: $email,
-        phone: $phone,
-        formID: 5,
-        formData: $formData
-      )
-      {
-        id
-      }
-    }
-`;
-  const submitForm = async variables => dataFetch({ query, variables });
-
-  const register = async () => {
-    const primaryData = ["name", "email", "phone"];
-    const otherInfo = Object.keys(inputs).filter(
-      el => !primaryData.includes(el)
-    );
-    console.log(inputs);
-    const userInfo = {
-      name: inputs.name,
-      email: inputs.email,
-      phone: inputs.phone,
-      formData: JSON.stringify(otherInfo)
-    };
-    const { data, errors } = await submitForm(userInfo);
-
-    if (Object.prototype.hasOwnProperty.call(data, "errors")) {
-      setErrorText(errors[0].message);
-    } else {
-      setSuccessText(data.id);
-      setErrorText("");
-    }
-  };
-
   return (
     <Layout location={location} title={siteTitle}>
       {!loading ? (
         <form
           onSubmit={async e => {
             setLoading(true);
-            await register();
+            await register(inputs, setErrorText, setSuccessText);
             e.preventDefault();
           }}
         >
