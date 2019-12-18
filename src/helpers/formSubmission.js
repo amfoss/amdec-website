@@ -7,7 +7,7 @@ const query = `
         name: $name,
         email: $email,
         phone: $phone,
-        formID: 5,
+        formID: 6,
         formData: $formData
       )
       {

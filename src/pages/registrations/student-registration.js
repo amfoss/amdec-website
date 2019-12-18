@@ -29,7 +29,7 @@ const ProjectRegistration = props => {
             e.preventDefault();
           }}
         >
-          <SEO title="Project Registation" />
+          <SEO title="Student Registation" />
           <Hero isColor={theme} isFullHeight isSize="medium">
             <Container>
               <Title className="has-text-centered p-2 mt-4">
@@ -110,22 +110,17 @@ const ProjectRegistration = props => {
                       </select>
                     </div>
                   </div>
-                  <div className="col-sm-6 p-0">
+                  <div className="col-md-6 p-0">
                     <div className="m-2">
-                      <label>Project *</label>
-                      <select
-                        className="form-control text-dark"
-                        name="project"
-                        onChange={handleInputChange}
-                        required
-                      >
-                        <option value="" hidden disabled selected>
-                          Select Project
-                        </option>
-                        <option value="male">Nidar</option>
-                        <option value="female">GitLit</option>
-                        <option value="other">Other</option>
-                      </select>
+                      <label>Link to the proposal *</label>
+                      <input
+                          type="text"
+                          placeholder="Link to the pdf proposal"
+                          name="proposal"
+                          className="form-control"
+                          onChange={handleInputChange}
+                          required
+                      />
                     </div>
                   </div>
                   <div className="col-md-6 p-0">
