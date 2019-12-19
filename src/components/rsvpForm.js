@@ -2,7 +2,7 @@ import React from 'react';
 import dataFetch from "../utils/dataFetch";
 
 const query = `
-mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, details: String!)
+mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, $details: String!)
 {
   submitRSVP(formID:$formID, hash: $hash, phone: $phone, response: $response, details:$details)
   {
