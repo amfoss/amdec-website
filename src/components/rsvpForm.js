@@ -2,9 +2,9 @@ import React from 'react';
 import dataFetch from "../utils/dataFetch";
 
 const query = `
-mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!)
+mutation($formID: Int!, $hash: String!,$phone: String!, $response: Boolean!, details: String!)
 {
-  submitRSVP(formID:$formID, hash: $hash, phone: $phone, response: $response)
+  submitRSVP(formID:$formID, hash: $hash, phone: $phone, response: $response, details:$details)
   {
     status
   }
@@ -17,6 +17,7 @@ class RSVPForm extends React.Component {
         this.state = {
             phone: '',
             response: true,
+            details: '',
             loading: false,
             successText: '',
             errorText: ''
@@ -28,7 +29,8 @@ class RSVPForm extends React.Component {
             'formID': 6,
             'hash': this.props.hash,
             'phone': this.state.phone,
-            'response': this.state.response
+            'response': this.state.response,
+            'details': this.state.details,
         };
         const response = await dataFetch({ query, variables });
         if (Object.prototype.hasOwnProperty.call(response, 'errors')) {
@@ -63,12 +65,14 @@ class RSVPForm extends React.Component {
                             className="form-group">
                             <div className="row">
                                 <div className="col-12 col-md-6 p-2">
-                                    <label>Will you be attending in the event?</label>
-                                    <select className="form-control" onChange={(e) => this.setState({response: e.currentTarget.value === "true" })}>
-                                        <option value="" hidden disabled selected>Select Response</option>
-                                        <option value="true">Yes</option>
-                                        <option value="false">No</option>
-                                    </select>
+                                    <label>Enter your proposal link</label>
+                                    <input
+                                        type="text"
+                                        placeholder="Enter proposal link"
+                                        name="proposal"
+                                        className="form-control"
+                                        onChange={(e) => this.setState({ details: e.currentTarget.value })}
+                                    />
                                 </div>
                                 <div className="col-12 col-md-6 p-2">
                                     <label>Enter your registered phone number</label>
@@ -80,7 +84,7 @@ class RSVPForm extends React.Component {
                                         onChange={(e) => this.setState({ phone: e.currentTarget.value })}
                                     />
                                 </div>
-                                <div className="col-12">
+                                <div className="col-12 p-2">
                                     <button
                                         type="submit"
                                         className="button btn-block px-4"

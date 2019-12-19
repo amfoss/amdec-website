@@ -112,19 +112,6 @@ const ProjectRegistration = props => {
                   </div>
                   <div className="col-md-6 p-0">
                     <div className="m-2">
-                      <label>Link to the proposal *</label>
-                      <input
-                          type="text"
-                          placeholder="Link to the pdf proposal"
-                          name="proposal"
-                          className="form-control"
-                          onChange={handleInputChange}
-                          required
-                      />
-                    </div>
-                  </div>
-                  <div className="col-md-6 p-0">
-                    <div className="m-2">
                       <label>Age *</label>
                       <input
                         type="number"

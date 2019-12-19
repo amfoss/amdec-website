@@ -61,14 +61,14 @@ const Header = () => {
               Guidelines
             </Link>
           </NavbarItem>
-          {/* <NavbarItem>
+          <NavbarItem>
             <Link
               to="/registrations/student-registration"
               className={`navbar-item has-text-light`}
             >
               Student Registration
             </Link>
-          </NavbarItem> */}
+          </NavbarItem>
         </NavbarEnd>
       </NavbarMenu>
     </Navbar>
