@@ -26,8 +26,8 @@ const Header = () => {
         <Link to={`/`} className="navbar-item">
           <img src={amDeCLight} alt="ASoC" style={{ height: "5vh" }} />
         </Link>
-        <NavbarBurger isActive={isActive} onClick={toggleIsActive} />
       </NavbarBrand>
+      <NavbarBurger isActive={isActive} onClick={toggleIsActive} />
       <NavbarMenu
         isActive={isActive}
         onClick={toggleIsActive}

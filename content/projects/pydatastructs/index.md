@@ -30,7 +30,7 @@ The following should be done for any new Pull Request(PR) made to this repositor
 3. Wait period - Wait for the author to respond to the reviews. If they don't respond for continuously two weeks then close that PR and create an issue if the PR was good and wasn't fixing any existing open issue.
 4. If the PR is passing tests and there are no pending reviews then merge the PR, again only for those who have write access.
 
-### Languages Need to learn
+### Technology Stack
 
  - Python
 

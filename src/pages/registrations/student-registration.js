@@ -140,6 +140,19 @@ const ProjectRegistration = props => {
                       </select>
                     </div>
                   </div>
+                  <div className="col-md-6 p-0">
+                    <div className="m-2">
+                      <label>Institution Name *</label>
+                      <input
+                          type="text"
+                          placeholder="Enter Institution Name"
+                          name="institution"
+                          className="form-control"
+                          onChange={handleInputChange}
+                          required
+                      />
+                    </div>
+                  </div>
                   <div className="col-md-12 p-0">
                     <div className="m-2">
                       <label>What do you expect from amFOSS? *</label>

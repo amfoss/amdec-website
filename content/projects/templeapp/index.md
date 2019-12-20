@@ -41,7 +41,7 @@ Data stored in a Firebase Realtime Database is retrieved by attaching an asynchr
 The above work is done in IncomeFragment.java, PoojaFragment.java
 The adapters are  DonationAdapter.java, PoojaAdapter.java
 
-### Languages Need to learn
+### Technology Stack
  
  - Java
  - XML

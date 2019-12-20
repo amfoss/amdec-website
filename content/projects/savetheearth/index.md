@@ -26,7 +26,7 @@ It also encourages the user to stay healthy by rewarding the user for using eco-
 
 Currently the neural back-end of the app is not formed and hence you can see in the video that we can easily cheat the system about the plant, we need to implement a back-end that would be able to log the location where the plant is being planted and the back-end need to verify if the plant is newly planted.
 
-### Languages Need to learn
+### Technology Stack
  
  - Java
  - XML

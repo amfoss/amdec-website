@@ -14,7 +14,7 @@ draft: false
 
 AmritaResource makes easier to share documents like Exam Paper, Study Material with your friends and classmates. Any user who is using the app can Uploads and View the Documents. Documents can be searched Branch-wise, Subject-wise, Semester-wise and by Title. Users can follow one or more subjects to receive updates when documents of those subjects are uploaded
 
-### Languages Need to learn
+### Technology Stack
 
  - Java
  - Android

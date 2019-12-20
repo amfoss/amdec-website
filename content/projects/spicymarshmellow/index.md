@@ -18,7 +18,7 @@ This app allows its users to view all clean-up drive events along with all the c
 
 The app currently only supports clean-up drive events. The app needs to support all events organised by Ayudh.
 
-### Languages to learn
+### Technology Stack
  
  - Java
  - XML

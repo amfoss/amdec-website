@@ -161,7 +161,7 @@ const ProjectsIndex = props => {
                   <div className="col-md-6">
                     <img src={amDeCBanLight} alt="amDeC" />
                   </div>
-                  <div className="col-md-6"></div>
+                  <div className="col-md-6" />
                 </div>
               </Container>
             </HeroBody>
@@ -209,42 +209,44 @@ const ProjectsIndex = props => {
                 >
                   Projects
                 </Title>
+                <div className="alert alert-warning p-3 m-4 text-center">
+                  If you are project in not listed, and would like to know, please contact amritapurifoss@gmail.com
+                </div>
                 <Container>
-                  <Fade>
-                    <Columns isMultiline>
-                      {projects.map(({ node }) => {
-                        const title = node.frontmatter.title || node.fields.slug;
-                        return (
+                  <Columns isMultiline>
+                    {projects.map(({ node }) => {
+                      const title = node.frontmatter.title || node.fields.slug;
+                      return (
                           <Column
-                            isSize={{
-                              fullhd: 4,
-                              desktop: 4,
-                              tablet: 6
-                            }}
-                            key={node.fields.slug}
+                              isSize={{
+                                fullhd: 4,
+                                desktop: 4,
+                                tablet: 6
+                              }}
+                              key={node.fields.slug}
                           >
                             <Animated className="animated-card">
                               <Link to={node.fields.slug}>
                                 <Card
-                                  className={`is-project has-background-${theme}`}
-                                  hasTextColor={theme}
+                                    className={`is-project has-background-${theme}`}
+                                    hasTextColor={theme}
                                 >
                                   {node.frontmatter.cover && (
-                                    <CardImage>
-                                      <LazyImage
-                                        fluid={
-                                          node.frontmatter.cover.childImageSharp
-                                            .fluid
-                                        }
-                                        alt={title}
-                                        className="image"
-                                      />
-                                    </CardImage>
+                                      <CardImage>
+                                        <LazyImage
+                                            fluid={
+                                              node.frontmatter.cover.childImageSharp
+                                                  .fluid
+                                            }
+                                            alt={title}
+                                            className="image"
+                                        />
+                                      </CardImage>
                                   )}
                                   <CardContent>
                                     <Title>{title}</Title>
                                     <Subtitle
-                                      hasTextColor={getOppositeTheme(theme)}
+                                        hasTextColor={getOppositeTheme(theme)}
                                     >
                                       <small>{node.frontmatter.topic}</small>
                                     </Subtitle>
@@ -253,10 +255,9 @@ const ProjectsIndex = props => {
                               </Link>
                             </Animated>
                           </Column>
-                        );
-                      })}
-                    </Columns>
-                  </Fade>
+                      );
+                    })}
+                  </Columns>
                 </Container>
               </HeroBody>
             </Hero>

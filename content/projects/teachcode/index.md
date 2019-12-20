@@ -14,7 +14,7 @@ draft: false
 
 A tool to develop and improve a student’s programming skills by introducing the earliest lessons of coding.
 
-### Languages to learn
+### Technology Stack
  
  - Node.js
  
