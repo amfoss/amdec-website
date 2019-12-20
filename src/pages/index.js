@@ -27,6 +27,7 @@ import FAQ from "../components/faq";
 import HttpsRedirect from "react-https-redirect";
 import Contact from "./contact";
 import RSVPForm from "../components/rsvpForm";
+import Research from "../components/research";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -262,6 +263,7 @@ const ProjectsIndex = props => {
               </HeroBody>
             </Hero>
           ) : null}
+          <Research/>
           <FAQ />
           <Contact />
         </Layout>
