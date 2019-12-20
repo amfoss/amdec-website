@@ -32,22 +32,6 @@ const ProjectTemplate = props => {
             </Subtitle>
           ))}
         </Container>
-        {cover && (
-          <div style={{ margin: `2rem -1.5rem` }}>
-            <LazyImage
-              fluid={cover.childImageSharp.fluid}
-              alt={project.frontmatter.title}
-              style={{
-                maxWidth: cover.childImageSharp.fluid.presentationWidth,
-                maxHeight:
-                  cover.childImageSharp.fluid.presentationWidth /
-                  cover.childImageSharp.fluid.aspectRatio,
-                margin: `0 auto`,
-                boxShadow: `0px 10px 30px -5px rgba(0, 0, 0, 0.3)`
-              }}
-            />
-          </div>
-        )}
         <Container>
           <Content
             hasTextColor={getOppositeTheme(theme)}
@@ -96,7 +80,7 @@ export const pageQuery = graphql`
         tags
         cover {
           childImageSharp {
-            fluid(maxWidth: 1400, maxHeight: 600, quality: 80) {
+            fluid(maxWidth: 2400, maxHeight: 1000, quality: 80) {
               ...GatsbyImageSharpFluid_withWebp
               presentationWidth
               originalImg

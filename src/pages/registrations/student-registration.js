@@ -30,7 +30,7 @@ const ProjectRegistration = props => {
           }}
         >
           <SEO title="Student Registation" />
-          <Hero isColor={theme} isFullHeight isSize="medium">
+          <Hero isColor={theme} isFullHeight isSize="medium" className="p-4">
             <Container>
               <Title className="has-text-centered p-2 mt-4">
                 Student Registration

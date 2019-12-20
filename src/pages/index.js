@@ -13,7 +13,6 @@ import {
   Title,
   Subtitle
 } from "bloomer";
-import Fade from "react-reveal/Fade";
 import Layout from "../components/layout";
 import SEO from "../components/seo";
 import Animated from "../components/animated";
@@ -34,7 +33,7 @@ const ProjectsIndex = props => {
   const { data, location } = props;
   const { title: siteTitle } = data.site.siteMetadata;
   const projects = data.allMarkdownRemark.edges;
-  const [hash, setHash] = useState('');
+  const [hash, setHash] = useState(undefined);
   const [queryLoaded, setQueryLoaded] = useState(false);
 
   useEffect(() => {
@@ -211,7 +210,7 @@ const ProjectsIndex = props => {
                   Projects
                 </Title>
                 <div className="alert alert-warning p-3 m-4 text-center">
-                  If you are project in not listed, and would like to know, please contact amritapurifoss@gmail.com
+                  If your project is not listed and you would like to know why, please contact amritapurifoss@gmail.com
                 </div>
                 <Container>
                   <Columns isMultiline>
@@ -232,18 +231,6 @@ const ProjectsIndex = props => {
                                     className={`is-project has-background-${theme}`}
                                     hasTextColor={theme}
                                 >
-                                  {node.frontmatter.cover && (
-                                      <CardImage>
-                                        <LazyImage
-                                            fluid={
-                                              node.frontmatter.cover.childImageSharp
-                                                  .fluid
-                                            }
-                                            alt={title}
-                                            className="image"
-                                        />
-                                      </CardImage>
-                                  )}
                                   <CardContent>
                                     <Title>{title}</Title>
                                     <Subtitle

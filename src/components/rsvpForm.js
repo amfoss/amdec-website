@@ -46,7 +46,7 @@ class RSVPForm extends React.Component {
     render() {
         return(
             <div className="d-flex m-0 text-light align-items-center justify-content-center" style={{ minHeight: '100vh', background: '#000'}}>
-                <div className="p-4">
+                <div className="container p-4">
                     <h1 className="text-center">amDeC 2019</h1>
                     <p className="p-2 text-center">
                         Thank you so much for showing interest in amDeC 2019, organized by amFOSS
@@ -65,13 +65,14 @@ class RSVPForm extends React.Component {
                             className="form-group">
                             <div className="row">
                                 <div className="col-12 col-md-6 p-2">
-                                    <label>Enter your proposal link</label>
+                                    <label>Enter your proposal link (doc/pdf)</label>
                                     <input
                                         type="text"
                                         placeholder="Enter proposal link"
                                         name="proposal"
                                         className="form-control"
                                         onChange={(e) => this.setState({ details: e.currentTarget.value })}
+                                        required
                                     />
                                 </div>
                                 <div className="col-12 col-md-6 p-2">
@@ -89,12 +90,12 @@ class RSVPForm extends React.Component {
                                         type="submit"
                                         className="button btn-block px-4"
                                     >
-                                        Submit RSVP
+                                        Submit
                                     </button>
                                 </div>
                             </div>
                         </form> : this.state.successText !== '' ?
-                            <div className="alert alert-success">Thank you! Please inform your friends too about submitting their RSVP.</div>
+                            <div className="alert alert-success">Thank you! Please inform your friends too about submitting their proposal.</div>
                             : <div className="alert alert-warning">Submitting. Please Wait</div>
                     }
                     {
