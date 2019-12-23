@@ -250,7 +250,6 @@ const ProjectsIndex = props => {
               </HeroBody>
             </Hero>
           ) : null}
-          <Research/>
           <FAQ />
           <Contact />
         </Layout>
