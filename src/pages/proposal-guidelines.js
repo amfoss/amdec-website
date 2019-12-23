@@ -36,6 +36,18 @@ const Proposal = () => {
                             3. How will your proposal help improve the current state of the project <br/>
                             If you think of any other details that you feel like adding, feel free to do so.
                         </p>
+                        <Title>Draft Proposal</Title>
+                        <p>
+                            You can submit a draft of your proposal to your mentor by directly emailing the mentor your proposal, on the chat channels or any other means you are comfortable with. Submitting a draft proposal to the respective mentors will be beneficial as you will be able to get great tips from the project mentors themselves on how to improve the proposal before the final submission. <br />
+                        </p>
+                        <Title>Best Practices for writing a proposal</Title>
+                        <p>
+                            1. Keep discussing with the project mentors about the ideas you mention in your proposal to ensure that they are within the scope of the project. <br />
+                            2. Add as many details about your plan to tackle a particular task. <br />
+                            3. Adding screenshots, mockups and code snippets is beneficial. Code snippets will also help a mentor evaluate your technical skills. <br />
+                            4. If you plan to continue working on the project after amDeC, please mention future deliverables too. <br />
+                            5. Write your proposal using Google Docs. When you submit a draft initially to the mentors, make sure you share a link with comment access. For submitting the final proposal, download the doc as a pdf and submit it in the link provided in the registration email recieved. <br />
+                        </p>
                     </div>
                 </HeroBody>
             </Hero>
