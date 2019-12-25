@@ -62,6 +62,11 @@ const Header = () => {
             </Link>
           </NavbarItem>
           <NavbarItem>
+            <Link to="/proposal-guidelines" className={`navbar-item has-text-light`}>
+              Proposal Guidelines
+            </Link>
+          </NavbarItem>
+          <NavbarItem>
             <Link
               to="/registrations/student-registration"
               className={`navbar-item has-text-light`}

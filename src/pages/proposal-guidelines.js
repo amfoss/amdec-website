@@ -10,11 +10,11 @@ const Proposal = () => {
         <Layout>
             <SEO title="Proposal Guidelines" />
             <Hero id="proposalGuidelines" isColor={theme}>
-                <Title className="has-text-centered" style={{ fontWeight: "900" }}>
+                <Title className="has-text-centered mt-4">
                    Proposal Guidelines
                 </Title>
                 <HeroBody>
-                    <div className="p-4 has-text-justified">
+                    <div className="container has-text-justified">
                         <Title>What is a proposal?</Title>
                         <p>A proposal is a description of how you aim to complete your project. In the proposal, you describe how much of the project you understand and how do you plan to complete the tasks or improvements suggested will be taken up.</p>
                         <br />

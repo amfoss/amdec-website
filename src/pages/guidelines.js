@@ -154,7 +154,7 @@ const NotFoundPage = props => {
 
           <ol className="pl-4">
             <li>
-              he or she is an immediate family member (including a parent,
+              He or She is an immediate family member (including a parent,
               sibling) of a Mentor or Project Administrator with the same
               community or a member of the same household (whether related or
               not) as a Mentor or Project Administrator with the same community.{" "}
@@ -176,7 +176,7 @@ const NotFoundPage = props => {
 
           <h3 id="role">Role</h3>
 
-          <ol>
+          <ol className="pl-4">
             <li>
               Mentors must be designated by the primary mentor of the project.
               By default, we will consider the person who submits the project as
@@ -195,7 +195,7 @@ const NotFoundPage = props => {
             registration for the Program, be either:
           </p>
 
-          <ol>
+          <ol className="pl-4">
             <li>
               Be a contributor to an active and viable open source project.{" "}
             </li>
@@ -206,12 +206,12 @@ const NotFoundPage = props => {
           <h3 id="responsibilities">Responsibilities</h3>
 
           <p>Each Mentor accepted will:</p>
-          <ol>
+          <ol className="pl-4">
             <li>Participate in the Community Bonding period. </li>
 
             <li>
               Provide guidance to his or her Student(s) on their projects:
-              <ul>
+              <ul className="pl-4">
                 <li>
                   Use best efforts to respond to Student requests within
                   Twenty-four(24) hours.{" "}
@@ -233,7 +233,7 @@ const NotFoundPage = props => {
 
             <li>
               Before program
-              <ul>
+              <ul className="pl-4">
                 <li>
                   Accept the invitation in the email sent by amFOSS to become an
                   official mentor.{" "}
@@ -262,7 +262,7 @@ const NotFoundPage = props => {
 
             <li>
               During program
-              <ul>
+              <ul className="pl-4">
                 <li>
                   Set development and communication lans with your mentee.{" "}
                 </li>
@@ -281,8 +281,6 @@ const NotFoundPage = props => {
           </ol>
           <h2 id="evaluationcriteria">Evaluation Criteria</h2>
 
-          <h3 id=""> </h3>
-
           <b>Students</b>
 
           <ol className="pl-4">
@@ -294,7 +292,7 @@ const NotFoundPage = props => {
             <li>
               Each evaluation requires the student to submit a blog post that
               covers the following:
-              <ul>
+              <ul className="pl-4">
                 <li>Work completed </li>
 
                 <li>Blockers </li>
@@ -303,9 +301,8 @@ const NotFoundPage = props => {
               </ul>
             </li>
           </ol>
-
+    
           <b>Mentors</b>
-
           <ul className="pl-4">
             <li>
               Mentors will have to complete the 3 evaluations biweekly without
@@ -324,7 +321,7 @@ const NotFoundPage = props => {
             </li>
           </ul>
           <h2>Privacy Policy</h2>
-          <ul>
+          <ul className="pl-4">
             <li>
               amFOSS will process the personal information provided during
               registration and in any subsequent communications to administer
