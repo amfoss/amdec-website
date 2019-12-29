@@ -39,13 +39,14 @@ const ProjectTemplate = props => {
           />
 
           <hr />
+          <Title className="p-2">Contact</Title>
           <Subtitle hasTextColor={getOppositeTheme(theme)}>
             {project.frontmatter.mentors.length > 1 ? "Mentors" : "Mentor"}
           </Subtitle>
           {project.frontmatter.mentors.map((mentor, index) => (
             <a href={`mailto: ${project.frontmatter.mentorsEmail[index]}`}>
               <Subtitle hasTextColor={getOppositeTheme(theme)}>
-                {index + 1}. {mentor}
+                {index + 1}. {mentor} ({project.frontmatter.mentorsEmail[index]})
               </Subtitle>
             </a>
           ))}

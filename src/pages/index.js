@@ -210,7 +210,7 @@ const ProjectsIndex = props => {
                   Projects
                 </Title>
                 <div className="alert alert-warning p-3 m-4 text-center">
-                  If your project is not listed and you would like to know why, please contact amritapurifoss@gmail.com
+                  Do not forget to submit your proposals well before December 31, 2019, 23:59 IST
                 </div>
                 <Container>
                   <Columns isMultiline>
