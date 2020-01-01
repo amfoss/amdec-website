@@ -15,7 +15,7 @@ const ProjectRegistration = props => {
   const siteTitle = data.site.siteMetadata.title;
   const [errorText, setErrorText] = useState("");
   const [successText, setSuccessText] = useState("");
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const { handleInputChange, inputs } = useSubmitForm();
 
@@ -228,7 +228,7 @@ const ProjectRegistration = props => {
           back to soon, meanwhile dont forget to bring your friends as well!
         </div>
       ) : (
-        <div className="alert alert-warning">Submitting. Please Wait</div>
+        <div className="alert alert-warning">Registrations are closed.</div>
       )}
     </Layout>
   );

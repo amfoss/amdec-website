@@ -66,14 +66,6 @@ const Header = () => {
               Proposal Guidelines
             </Link>
           </NavbarItem>
-          <NavbarItem>
-            <Link
-              to="/registrations/student-registration"
-              className={`navbar-item has-text-light`}
-            >
-              Student Registration
-            </Link>
-          </NavbarItem>
         </NavbarEnd>
       </NavbarMenu>
     </Navbar>

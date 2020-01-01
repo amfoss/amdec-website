@@ -18,7 +18,7 @@ class RSVPForm extends React.Component {
             phone: '',
             response: true,
             details: '',
-            loading: false,
+            loading: true,
             successText: '',
             errorText: ''
         }
@@ -96,7 +96,7 @@ class RSVPForm extends React.Component {
                             </div>
                         </form> : this.state.successText !== '' ?
                             <div className="alert alert-success">Thank you! Please inform your friends too about submitting their proposal.</div>
-                            : <div className="alert alert-warning">Submitting. Please Wait</div>
+                            : <div className="alert alert-warning">Registration are closed.</div>
                     }
                     {
                         this.state.errorText !== '' ?
