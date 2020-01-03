@@ -1,10 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { Link, graphql } from "gatsby";
-import LazyImage from "gatsby-image";
 import {
   Card,
   CardContent,
-  CardImage,
   Column,
   Columns,
   Container,
@@ -26,7 +24,6 @@ import FAQ from "../components/faq";
 import HttpsRedirect from "react-https-redirect";
 import Contact from "./contact";
 import RSVPForm from "../components/rsvpForm";
-import Research from "../components/research";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -166,6 +163,55 @@ const ProjectsIndex = props => {
               </Container>
             </HeroBody>
           </Hero>
+          {projects.length > 0 ? (
+              <Hero id="selectedprojects" isColor={theme}>
+                <HeroBody>
+                  <Title
+                      className="has-text-centered pb-4"
+                      style={{ fontWeight: "900" }}
+                  >
+                    Accepted Students
+                  </Title>
+                  <Container>
+                    <Columns isMultiline>
+                      {projects.map(({ node }) => {
+                        const title = node.frontmatter.title || node.fields.slug;
+                        return node.frontmatter.selected ? (
+                            <Column
+                                isSize={{
+                                  fullhd: 6,
+                                  desktop: 6,
+                                  tablet: 12
+                                }}
+                                key={node.fields.slug}
+                            >
+                              <Card
+                                  className={`is-project has-background-${theme}`}
+                                  hasTextColor={theme}
+                              >
+                                <div>
+                                  <div className="has-background-black p-2">
+                                    <Title className="has-text-white p-1" isSize={4}>{node.frontmatter.selectedStudent}</Title>
+                                    <Subtitle
+                                        className="has-text-white p-1"
+                                        hasTextColor={getOppositeTheme(theme)}
+                                    >
+                                      <small className="has-text-white">{title}</small>
+                                    </Subtitle>
+                                  </div>
+                                  <div className="has-text-justified p-4">
+                                    <small className="has-text-grey-dark">{node.frontmatter.content}</small>
+                                  </div>
+                                </div>
+                              </Card>
+                            </Column>
+                        ): null;
+                      })}
+                    </Columns>
+                  </Container>
+                </HeroBody>
+              </Hero>
+          ) : null}
           <About />
           <Why />
           <Hero id="timeline" isColor={theme}>
@@ -209,9 +255,6 @@ const ProjectsIndex = props => {
                 >
                   Projects
                 </Title>
-                <div className="alert alert-warning p-3 m-4 text-center">
-                  Do not forget to submit your proposals well before December 31, 2019, 23:59 IST
-                </div>
                 <Container>
                   <Columns isMultiline>
                     {projects.map(({ node }) => {
@@ -278,6 +321,9 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
+            selected
+            content
+            selectedStudent
             mentors
             topic
             title

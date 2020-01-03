@@ -5,6 +5,9 @@ cover: './cover.png'
 topic: Android App Development
 mentors: ['Abhilash G']
 mentorsEmail: ['abhilash.ag1997@gmail.com ']
+selected: false
+selectedStudent: ['xyz']
+content: AmritaResource makes easier to share documents like Exam Paper, Study Material
 draft: false
 ---
 

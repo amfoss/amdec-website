@@ -5,6 +5,10 @@ cover: './cover.png'
 topic: Android Development
 mentors: ['Ajay Prabhakar']
 mentorsEmail: ['ajayprabhakar369@gmail.com']
+selected: true
+selectedStudent: ['Kaniganti Sai Tarun']
+content: By using facebook API firebase can store the token in the app so, that login will be easy for the user but in email, users have to verify.
+         And I want to improve the User Interface Of app
 draft: false
 ---
 

@@ -5,6 +5,10 @@ cover: './cover.png'
 topic: Android App Development
 mentors: ['Ajay Prabhakar']
 mentorsEmail: ['ajayprabhakar369@gmail.com']
+selected: true
+selectedStudent: ['Aashrith Kandimalla']
+content: This app is a cost-efficient way of maintaining records of poojas, donations made by people and also all the financial records in temples. Using this app, people in the temple counter will be able to enter all the details regarding the poojas they want or some donations they want to do for the temple.
+
 draft: false
 ---
 

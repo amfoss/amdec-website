@@ -5,6 +5,11 @@ cover: './cover.png'
 topic: Data Structures
 mentors: ['Gagandeep Singh']
 mentorsEmail: ['gdp.1807@gmail.com']
+selected: true
+selectedStudent: ['Anand Murali']
+content: This project has a lot of data structures in python, a queue can be implemented using arrays.
+         As I am quite new to programming with python implementing a data structure like queue in
+         python will be a good start for me to get into contributing to open source.
 draft: false
 ---
 

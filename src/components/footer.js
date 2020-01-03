@@ -17,6 +17,7 @@ import {
 import { ThemeContext } from "../contexts/theme";
 import { Link } from "gatsby";
 import amFOSSLogo from "../images/logo_light.png";
+import Github from "../images/github.png";
 
 const Footer = () => {
   const { theme } = useContext(ThemeContext);
@@ -145,7 +146,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="has-text-centered" style={{ marginTop: "10px" }}>
-              (C) 2019 amFOSS. All Rights Reserved
+              Thank You
+            </div>
+            <div className="has-text-centered footer-logo" style={{ marginTop: "10px" }}>
+              <a href="https://github.com/">
+                <img className="px-2" src={Github} alt="Github" />
+              </a>
             </div>
           </Container>
         </BloomerFooter>
