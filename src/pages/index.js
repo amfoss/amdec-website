@@ -24,6 +24,7 @@ import FAQ from "../components/faq";
 import HttpsRedirect from "react-https-redirect";
 import Contact from "./contact";
 import RSVPForm from "../components/rsvpForm";
+import Selected from "../components/selected";
 
 const ProjectsIndex = props => {
   const { theme } = useContext(ThemeContext);
@@ -163,6 +164,7 @@ const ProjectsIndex = props => {
               </Container>
             </HeroBody>
           </Hero>
+          <Selected />
           {projects.length > 0 ? (
               <Hero id="selectedprojects" isColor={theme}>
                 <HeroBody>
